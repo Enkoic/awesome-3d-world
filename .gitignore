@@ -1,0 +1,10 @@
+.work/
+dist/
+output/
+.playwright-cli/
+.playwright/
+.DS_Store
+__pycache__/
+*.pyc
+.env*
+node_modules/

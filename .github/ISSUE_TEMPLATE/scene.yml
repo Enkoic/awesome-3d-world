@@ -1,0 +1,66 @@
+name: 补充地点或三维场景
+description: 提交地点建议、模型资源或可运行的三维世界
+title: "[场景] "
+body:
+  - type: input
+    id: name
+    attributes:
+      label: 场景名称
+      description: 同名地点请附校区、城市或作品名称
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: 主分类
+      options:
+        - 大学与校园
+        - 景区与自然景观
+        - 城市与街区
+        - 地标与公共空间
+        - 历史复原
+        - 架空与文学世界
+    validations:
+      required: true
+  - type: dropdown
+    id: status
+    attributes:
+      label: 提交内容
+      options:
+        - 地点建议，尚无模型
+        - 外部资源线索，待核验
+        - 可浏览场景，附验证记录
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: 地点、时代与覆盖范围
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: 地点来源与模型来源
+      description: 请分别提供；官网不等于模型来源
+    validations:
+      required: true
+  - type: textarea
+    id: resources
+    attributes:
+      label: 在线浏览、下载和运行方式
+      description: 写明格式、文件大小、依赖、可用日期；无资源可填“待补充”
+  - type: textarea
+    id: rights
+    attributes:
+      label: 作者与许可证
+      description: 附许可来源；未知请写未声明，不自行推定可商用或再分发
+    validations:
+      required: true
+  - type: textarea
+    id: accuracy
+    attributes:
+      label: 来源方法、精度与推定内容
+      description: 区分视觉表现与实测精度，历史/文学重构须写明艺术补全
+    validations:
+      required: true

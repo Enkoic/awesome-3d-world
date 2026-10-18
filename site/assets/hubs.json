@@ -1,0 +1,50 @@
+[
+  {
+    "name": "GlobalBuildingAtlas",
+    "description": "全球建筑轮廓与 LoD1 体块数据。适合场景底图；不代表精细立面或完整景区。",
+    "url": "https://github.com/zhu-xlab/GlobalBuildingAtlas",
+    "type": "建筑数据"
+  },
+  {
+    "name": "Awesome CityGML",
+    "description": "各国与城市开放三维数据的导航目录。按原数据源核验格式、精度和许可。",
+    "url": "https://github.com/OloOcki/awesome-citygml",
+    "type": "数据导航"
+  },
+  {
+    "name": "Project PLATEAU",
+    "description": "日本城市三维模型及相关工具；数据在官方开放数据平台分发。",
+    "url": "https://github.com/Project-PLATEAU",
+    "type": "城市模型"
+  },
+  {
+    "name": "CULTURE3D",
+    "description": "校园与文化地标重建数据集，提供项目说明和数据入口。",
+    "url": "https://github.com/X-Intelligence-Labs/CULTURE3D",
+    "type": "重建数据"
+  },
+  {
+    "name": "OSM2World",
+    "description": "从 OpenStreetMap 数据生成三维环境的工具，结果受源数据完整度影响。",
+    "url": "https://github.com/tordanik/OSM2World",
+    "type": "生成工具"
+  },
+  {
+    "name": "World Architecture Atlas 3D",
+    "description": "10 个程序化生成的世界地标，适合参考地图与 GLB 展示方式。",
+    "url": "https://github.com/hszzhua2/world-architecture-atlas-3d",
+    "type": "地标合集"
+  },
+  {
+    "name": "Open City Model",
+    "description": "美国建筑的 LoD1 数据；数据文件在 AWS S3，GitHub 提供索引说明。",
+    "url": "https://github.com/opencitymodel/opencitymodel",
+    "type": "建筑数据"
+  },
+  {
+    "name": "Monuments",
+    "description": "历史建筑模型与建模证据；逐个核验具体模型范围与授权。",
+    "url": "https://github.com/bilol-makhmudov/monuments",
+    "type": "建筑模型"
+  }
+]

@@ -1,0 +1,2075 @@
+{
+  "schema_version": 1,
+  "entries": [
+    {
+      "id": "daguanyuan",
+      "name": "大观园",
+      "name_en": "The Grand View Garden",
+      "category": "fictional",
+      "world": "fictional",
+      "location": "《红楼梦》 · 文学空间",
+      "countries": [],
+      "region": "",
+      "tags": [
+        "体素",
+        "园林",
+        "红楼梦",
+        "文学重构",
+        "四季",
+        "昼夜"
+      ],
+      "status": "ready",
+      "scope": "文学园林：建筑群、水系、游线与景观",
+      "description": "从《红楼梦》的文字走进园林。游览潇湘馆、怡红院与稻香村，体验四季、昼夜和章节导览。",
+      "sources": [
+        {
+          "label": "地点或作品来源",
+          "url": "https://zh.wikisource.org/wiki/紅樓夢/第017回",
+          "role": "place",
+          "checked_at": null
+        },
+        {
+          "label": "场景原文件中的考据说明",
+          "url": "https://github.com/Enkoic/awesome-3d-world/blob/main/site/scenes/daguanyuan/index.html",
+          "role": "asset",
+          "checked_at": "2026-10-18"
+        }
+      ],
+      "notability": {
+        "basis": "作品原文",
+        "source": "https://zh.wikisource.org/wiki/紅樓夢/第017回"
+      },
+      "accuracy": {
+        "method": "小说文本、参考图与艺术重构",
+        "visual": "体素风格；可交互建筑与景观",
+        "geometry": "文学重构，非实测模型",
+        "limitations": "依据《红楼梦》进行艺术重构，采用虚构布局与体素尺度。"
+      },
+      "resources": [
+        {
+          "kind": "preview",
+          "label": "进入大观园",
+          "url": "scenes/daguanyuan/index.html",
+          "format": "HTML / WebGL"
+        },
+        {
+          "kind": "download",
+          "label": "下载完整 HTML 场景",
+          "url": "scenes/daguanyuan/index.html",
+          "format": "HTML",
+          "bytes": 968402,
+          "sha256": "ae6ba93b174a6ff334051e9cb06b2352d62f351c240c3ca323d6f0a89439fcf2"
+        }
+      ],
+      "license": "LicenseRef-Not-Specified",
+      "author": "Enkoic 提供",
+      "verified_at": "2026-10-18",
+      "added_at": "2026-10-18"
+    },
+    {
+      "id": "campus-fudan",
+      "name": "复旦大学",
+      "name_en": "Fudan University",
+      "category": "campus",
+      "world": "real",
+      "location": "上海",
+      "countries": [
+        "CN"
+      ],
+      "region": "",
+      "tags": [
+        "大学",
+        "校园"
+      ],
+      "status": "external",
+      "scope": null,
+      "description": "通过关联项目查看资源与说明。",
+      "sources": [
+        {
+          "label": "地点或作品来源",
+          "url": "https://www.fudan.edu.cn/",
+          "role": "place",
+          "checked_at": null
+        },
+        {
+          "label": "FudanCampus 开源项目",
+          "url": "https://github.com/bennix/FudanCampus",
+          "role": "asset",
+          "checked_at": "2026-10-18"
+        }
+      ],
+      "notability": {
+        "basis": "校方官网",
+        "source": "https://www.fudan.edu.cn/"
+      },
+      "accuracy": {
+        "method": null,
+        "visual": null,
+        "geometry": null,
+        "limitations": null
+      },
+      "resources": [
+        {
+          "kind": "source",
+          "label": "FudanCampus 开源项目",
+          "url": "https://github.com/bennix/FudanCampus",
+          "format": "外部项目"
+        }
+      ],
+      "license": "per-source",
+      "author": null,
+      "verified_at": null,
+      "added_at": "2026-10-18"
+    },
+    {
+      "id": "campus-xjtlu",
+      "name": "西交利物浦大学",
+      "name_en": "Xi'an Jiaotong-Liverpool University",
+      "category": "campus",
+      "world": "real",
+      "location": "苏州",
+      "countries": [
+        "CN"
+      ],
+      "region": "",
+      "tags": [
+        "大学",
+        "校园"
+      ],
+      "status": "planned",
+      "scope": null,
+      "description": "查看地点档案，或补充这里的三维场景。",
+      "sources": [
+        {
+          "label": "地点或作品来源",
+          "url": "https://www.xjtlu.edu.cn/zh",
+          "role": "place",
+          "checked_at": null
+        }
+      ],
+      "notability": {
+        "basis": "校方官网",
+        "source": "https://www.xjtlu.edu.cn/zh"
+      },
+      "accuracy": {
+        "method": null,
+        "visual": null,
+        "geometry": null,
+        "limitations": null
+      },
+      "resources": [],
+      "license": "not-applicable",
+      "author": null,
+      "verified_at": null,
+      "added_at": "2026-10-18"
+    },
+    {
+      "id": "campus-pku",
+      "name": "北京大学",
+      "name_en": "Peking University",
+      "category": "campus",
+      "world": "real",
+      "location": "北京",
+      "countries": [
+        "CN"
+      ],
+      "region": "",
+      "tags": [
+        "大学",
+        "校园"
+      ],
+      "status": "planned",
+      "scope": null,
+      "description": "查看地点档案，或补充这里的三维场景。",
+      "sources": [
+        {
+          "label": "地点或作品来源",
+          "url": "https://www.pku.edu.cn/",
+          "role": "place",
+          "checked_at": null
+        }
+      ],
+      "notability": {
+        "basis": "校方官网",
+        "source": "https://www.pku.edu.cn/"
+      },
+      "accuracy": {
+        "method": null,
+        "visual": null,
+        "geometry": null,
+        "limitations": null
+      },
+      "resources": [],
+      "license": "not-applicable",
+      "author": null,
+      "verified_at": null,
+      "added_at": "2026-10-18"
+    },
+    {
+      "id": "campus-tsinghua",
+      "name": "清华大学",
+      "name_en": "Tsinghua University",
+      "category": "campus",
+      "world": "real",
+      "location": "北京",
+      "countries": [
+        "CN"
+      ],
+      "region": "",
+      "tags": [
+        "大学",
+        "校园"
+      ],
+      "status": "planned",
+      "scope": null,
+      "description": "查看地点档案，或补充这里的三维场景。",
+      "sources": [
+        {
+          "label": "地点或作品来源",
+          "url": "https://www.tsinghua.edu.cn/",
+          "role": "place",
+          "checked_at": null
+        }
+      ],
+      "notability": {
+        "basis": "校方官网",
+        "source": "https://www.tsinghua.edu.cn/"
+      },
+      "accuracy": {
+        "method": null,
+        "visual": null,
+        "geometry": null,
+        "limitations": null
+      },
+      "resources": [],
+      "license": "not-applicable",
+      "author": null,
+      "verified_at": null,
+      "added_at": "2026-10-18"
+    },
+    {
+      "id": "campus-sjtu",
+      "name": "上海交通大学",
+      "name_en": "Shanghai Jiao Tong University",
+      "category": "campus",
+      "world": "real",
+      "location": "上海",
+      "countries": [
+        "CN"
+      ],
+      "region": "",
+      "tags": [
+        "大学",
+        "校园"
+      ],
+      "status": "planned",
+      "scope": null,
+      "description": "查看地点档案，或补充这里的三维场景。",
+      "sources": [
+        {
+          "label": "地点或作品来源",
+          "url": "https://www.sjtu.edu.cn/",
+          "role": "place",
+          "checked_at": null
+        }
+      ],
+      "notability": {
+        "basis": "校方官网",
+        "source": "https://www.sjtu.edu.cn/"
+      },
+      "accuracy": {
+        "method": null,
+        "visual": null,
+        "geometry": null,
+        "limitations": null
+      },
+      "resources": [],
+      "license": "not-applicable",
+      "author": null,
+      "verified_at": null,
+      "added_at": "2026-10-18"
+    },
+    {
+      "id": "campus-tongji",
+      "name": "同济大学",
+      "name_en": "Tongji University",
+      "category": "campus",
+      "world": "real",
+      "location": "上海",
+      "countries": [
+        "CN"
+      ],
+      "region": "",
+      "tags": [
+        "大学",
+        "校园"
+      ],
+      "status": "planned",
+      "scope": null,
+      "description": "查看地点档案，或补充这里的三维场景。",
+      "sources": [
+        {
+          "label": "地点或作品来源",
+          "url": "https://www.tongji.edu.cn/",
+          "role": "place",
+          "checked_at": null
+        }
+      ],
+      "notability": {
+        "basis": "校方官网",
+        "source": "https://www.tongji.edu.cn/"
+      },
+      "accuracy": {
+        "method": null,
+        "visual": null,
+        "geometry": null,
+        "limitations": null
+      },
+      "resources": [],
+      "license": "not-applicable",
+      "author": null,
+      "verified_at": null,
+      "added_at": "2026-10-18"
+    },
+    {
+      "id": "campus-zju",
+      "name": "浙江大学",
+      "name_en": "Zhejiang University",
+      "category": "campus",
+      "world": "real",
+      "location": "杭州",
+      "countries": [
+        "CN"
+      ],
+      "region": "",
+      "tags": [
+        "大学",
+        "校园"
+      ],
+      "status": "planned",
+      "scope": null,
+      "description": "查看地点档案，或补充这里的三维场景。",
+      "sources": [
+        {
+          "label": "地点或作品来源",
+          "url": "https://www.zju.edu.cn/",
+          "role": "place",
+          "checked_at": null
+        }
+      ],
+      "notability": {
+        "basis": "校方官网",
+        "source": "https://www.zju.edu.cn/"
+      },
+      "accuracy": {
+        "method": null,
+        "visual": null,
+        "geometry": null,
+        "limitations": null
+      },
+      "resources": [],
+      "license": "not-applicable",
+      "author": null,
+      "verified_at": null,
+      "added_at": "2026-10-18"
+    },
+    {
+      "id": "campus-nju",
+      "name": "南京大学",
+      "name_en": "Nanjing University",
+      "category": "campus",
+      "world": "real",
+      "location": "南京",
+      "countries": [
+        "CN"
+      ],
+      "region": "",
+      "tags": [
+        "大学",
+        "校园"
+      ],
+      "status": "planned",
+      "scope": null,
+      "description": "查看地点档案，或补充这里的三维场景。",
+      "sources": [
+        {
+          "label": "地点或作品来源",
+          "url": "https://www.nju.edu.cn/",
+          "role": "place",
+          "checked_at": null
+        }
+      ],
+      "notability": {
+        "basis": "校方官网",
+        "source": "https://www.nju.edu.cn/"
+      },
+      "accuracy": {
+        "method": null,
+        "visual": null,
+        "geometry": null,
+        "limitations": null
+      },
+      "resources": [],
+      "license": "not-applicable",
+      "author": null,
+      "verified_at": null,
+      "added_at": "2026-10-18"
+    },
+    {
+      "id": "campus-whu",
+      "name": "武汉大学",
+      "name_en": "Wuhan University",
+      "category": "campus",
+      "world": "real",
+      "location": "武汉",
+      "countries": [
+        "CN"
+      ],
+      "region": "",
+      "tags": [
+        "大学",
+        "校园"
+      ],
+      "status": "planned",
+      "scope": null,
+      "description": "查看地点档案，或补充这里的三维场景。",
+      "sources": [
+        {
+          "label": "地点或作品来源",
+          "url": "https://www.whu.edu.cn/",
+          "role": "place",
+          "checked_at": null
+        }
+      ],
+      "notability": {
+        "basis": "校方官网",
+        "source": "https://www.whu.edu.cn/"
+      },
+      "accuracy": {
+        "method": null,
+        "visual": null,
+        "geometry": null,
+        "limitations": null
+      },
+      "resources": [],
+      "license": "not-applicable",
+      "author": null,
+      "verified_at": null,
+      "added_at": "2026-10-18"
+    },
+    {
+      "id": "campus-xjtu",
+      "name": "西安交通大学",
+      "name_en": "Xi'an Jiaotong University",
+      "category": "campus",
+      "world": "real",
+      "location": "西安",
+      "countries": [
+        "CN"
+      ],
+      "region": "",
+      "tags": [
+        "大学",
+        "校园"
+      ],
+      "status": "planned",
+      "scope": null,
+      "description": "查看地点档案，或补充这里的三维场景。",
+      "sources": [
+        {
+          "label": "地点或作品来源",
+          "url": "https://www.xjtu.edu.cn/",
+          "role": "place",
+          "checked_at": null
+        }
+      ],
+      "notability": {
+        "basis": "校方官网",
+        "source": "https://www.xjtu.edu.cn/"
+      },
+      "accuracy": {
+        "method": null,
+        "visual": null,
+        "geometry": null,
+        "limitations": null
+      },
+      "resources": [],
+      "license": "not-applicable",
+      "author": null,
+      "verified_at": null,
+      "added_at": "2026-10-18"
+    },
+    {
+      "id": "campus-sysu",
+      "name": "中山大学",
+      "name_en": "Sun Yat-sen University",
+      "category": "campus",
+      "world": "real",
+      "location": "广东",
+      "countries": [
+        "CN"
+      ],
+      "region": "",
+      "tags": [
+        "大学",
+        "校园"
+      ],
+      "status": "planned",
+      "scope": null,
+      "description": "查看地点档案，或补充这里的三维场景。",
+      "sources": [
+        {
+          "label": "地点或作品来源",
+          "url": "https://www.sysu.edu.cn/",
+          "role": "place",
+          "checked_at": null
+        }
+      ],
+      "notability": {
+        "basis": "校方官网",
+        "source": "https://www.sysu.edu.cn/"
+      },
+      "accuracy": {
+        "method": null,
+        "visual": null,
+        "geometry": null,
+        "limitations": null
+      },
+      "resources": [],
+      "license": "not-applicable",
+      "author": null,
+      "verified_at": null,
+      "added_at": "2026-10-18"
+    },
+    {
+      "id": "campus-xmu",
+      "name": "厦门大学",
+      "name_en": "Xiamen University",
+      "category": "campus",
+      "world": "real",
+      "location": "厦门",
+      "countries": [
+        "CN"
+      ],
+      "region": "",
+      "tags": [
+        "大学",
+        "校园"
+      ],
+      "status": "planned",
+      "scope": null,
+      "description": "查看地点档案，或补充这里的三维场景。",
+      "sources": [
+        {
+          "label": "地点或作品来源",
+          "url": "https://www.xmu.edu.cn/",
+          "role": "place",
+          "checked_at": null
+        }
+      ],
+      "notability": {
+        "basis": "校方官网",
+        "source": "https://www.xmu.edu.cn/"
+      },
+      "accuracy": {
+        "method": null,
+        "visual": null,
+        "geometry": null,
+        "limitations": null
+      },
+      "resources": [],
+      "license": "not-applicable",
+      "author": null,
+      "verified_at": null,
+      "added_at": "2026-10-18"
+    },
+    {
+      "id": "campus-scu",
+      "name": "四川大学",
+      "name_en": "Sichuan University",
+      "category": "campus",
+      "world": "real",
+      "location": "成都",
+      "countries": [
+        "CN"
+      ],
+      "region": "",
+      "tags": [
+        "大学",
+        "校园"
+      ],
+      "status": "planned",
+      "scope": null,
+      "description": "查看地点档案，或补充这里的三维场景。",
+      "sources": [
+        {
+          "label": "地点或作品来源",
+          "url": "https://www.scu.edu.cn/",
+          "role": "place",
+          "checked_at": null
+        }
+      ],
+      "notability": {
+        "basis": "校方官网",
+        "source": "https://www.scu.edu.cn/"
+      },
+      "accuracy": {
+        "method": null,
+        "visual": null,
+        "geometry": null,
+        "limitations": null
+      },
+      "resources": [],
+      "license": "not-applicable",
+      "author": null,
+      "verified_at": null,
+      "added_at": "2026-10-18"
+    },
+    {
+      "id": "campus-hnu",
+      "name": "湖南大学",
+      "name_en": "Hunan University",
+      "category": "campus",
+      "world": "real",
+      "location": "长沙",
+      "countries": [
+        "CN"
+      ],
+      "region": "",
+      "tags": [
+        "大学",
+        "校园"
+      ],
+      "status": "planned",
+      "scope": null,
+      "description": "查看地点档案，或补充这里的三维场景。",
+      "sources": [
+        {
+          "label": "地点或作品来源",
+          "url": "https://www.hnu.edu.cn/",
+          "role": "place",
+          "checked_at": null
+        }
+      ],
+      "notability": {
+        "basis": "校方官网",
+        "source": "https://www.hnu.edu.cn/"
+      },
+      "accuracy": {
+        "method": null,
+        "visual": null,
+        "geometry": null,
+        "limitations": null
+      },
+      "resources": [],
+      "license": "not-applicable",
+      "author": null,
+      "verified_at": null,
+      "added_at": "2026-10-18"
+    },
+    {
+      "id": "campus-seu",
+      "name": "东南大学",
+      "name_en": "Southeast University",
+      "category": "campus",
+      "world": "real",
+      "location": "南京",
+      "countries": [
+        "CN"
+      ],
+      "region": "",
+      "tags": [
+        "大学",
+        "校园"
+      ],
+      "status": "planned",
+      "scope": null,
+      "description": "查看地点档案，或补充这里的三维场景。",
+      "sources": [
+        {
+          "label": "地点或作品来源",
+          "url": "https://www.seu.edu.cn/",
+          "role": "place",
+          "checked_at": null
+        }
+      ],
+      "notability": {
+        "basis": "校方官网",
+        "source": "https://www.seu.edu.cn/"
+      },
+      "accuracy": {
+        "method": null,
+        "visual": null,
+        "geometry": null,
+        "limitations": null
+      },
+      "resources": [],
+      "license": "not-applicable",
+      "author": null,
+      "verified_at": null,
+      "added_at": "2026-10-18"
+    },
+    {
+      "id": "campus-nankai",
+      "name": "南开大学",
+      "name_en": "Nankai University",
+      "category": "campus",
+      "world": "real",
+      "location": "天津",
+      "countries": [
+        "CN"
+      ],
+      "region": "",
+      "tags": [
+        "大学",
+        "校园"
+      ],
+      "status": "planned",
+      "scope": null,
+      "description": "查看地点档案，或补充这里的三维场景。",
+      "sources": [
+        {
+          "label": "地点或作品来源",
+          "url": "https://www.nankai.edu.cn/",
+          "role": "place",
+          "checked_at": null
+        }
+      ],
+      "notability": {
+        "basis": "校方官网",
+        "source": "https://www.nankai.edu.cn/"
+      },
+      "accuracy": {
+        "method": null,
+        "visual": null,
+        "geometry": null,
+        "limitations": null
+      },
+      "resources": [],
+      "license": "not-applicable",
+      "author": null,
+      "verified_at": null,
+      "added_at": "2026-10-18"
+    },
+    {
+      "id": "campus-tju",
+      "name": "天津大学",
+      "name_en": "Tianjin University",
+      "category": "campus",
+      "world": "real",
+      "location": "天津",
+      "countries": [
+        "CN"
+      ],
+      "region": "",
+      "tags": [
+        "大学",
+        "校园"
+      ],
+      "status": "planned",
+      "scope": null,
+      "description": "查看地点档案，或补充这里的三维场景。",
+      "sources": [
+        {
+          "label": "地点或作品来源",
+          "url": "https://www.tju.edu.cn/",
+          "role": "place",
+          "checked_at": null
+        }
+      ],
+      "notability": {
+        "basis": "校方官网",
+        "source": "https://www.tju.edu.cn/"
+      },
+      "accuracy": {
+        "method": null,
+        "visual": null,
+        "geometry": null,
+        "limitations": null
+      },
+      "resources": [],
+      "license": "not-applicable",
+      "author": null,
+      "verified_at": null,
+      "added_at": "2026-10-18"
+    },
+    {
+      "id": "campus-bnu",
+      "name": "北京师范大学",
+      "name_en": "Beijing Normal University",
+      "category": "campus",
+      "world": "real",
+      "location": "北京",
+      "countries": [
+        "CN"
+      ],
+      "region": "",
+      "tags": [
+        "大学",
+        "校园"
+      ],
+      "status": "planned",
+      "scope": null,
+      "description": "查看地点档案，或补充这里的三维场景。",
+      "sources": [
+        {
+          "label": "地点或作品来源",
+          "url": "https://www.bnu.edu.cn/",
+          "role": "place",
+          "checked_at": null
+        }
+      ],
+      "notability": {
+        "basis": "校方官网",
+        "source": "https://www.bnu.edu.cn/"
+      },
+      "accuracy": {
+        "method": null,
+        "visual": null,
+        "geometry": null,
+        "limitations": null
+      },
+      "resources": [],
+      "license": "not-applicable",
+      "author": null,
+      "verified_at": null,
+      "added_at": "2026-10-18"
+    },
+    {
+      "id": "campus-ustc",
+      "name": "中国科学技术大学",
+      "name_en": "University of Science and Technology of China",
+      "category": "campus",
+      "world": "real",
+      "location": "合肥",
+      "countries": [
+        "CN"
+      ],
+      "region": "",
+      "tags": [
+        "大学",
+        "校园"
+      ],
+      "status": "planned",
+      "scope": null,
+      "description": "查看地点档案，或补充这里的三维场景。",
+      "sources": [
+        {
+          "label": "地点或作品来源",
+          "url": "https://www.ustc.edu.cn/",
+          "role": "place",
+          "checked_at": null
+        }
+      ],
+      "notability": {
+        "basis": "校方官网",
+        "source": "https://www.ustc.edu.cn/"
+      },
+      "accuracy": {
+        "method": null,
+        "visual": null,
+        "geometry": null,
+        "limitations": null
+      },
+      "resources": [],
+      "license": "not-applicable",
+      "author": null,
+      "verified_at": null,
+      "added_at": "2026-10-18"
+    },
+    {
+      "id": "campus-hust",
+      "name": "华中科技大学",
+      "name_en": "Huazhong University of Science and Technology",
+      "category": "campus",
+      "world": "real",
+      "location": "武汉",
+      "countries": [
+        "CN"
+      ],
+      "region": "",
+      "tags": [
+        "大学",
+        "校园"
+      ],
+      "status": "planned",
+      "scope": null,
+      "description": "查看地点档案，或补充这里的三维场景。",
+      "sources": [
+        {
+          "label": "地点或作品来源",
+          "url": "https://www.hust.edu.cn/",
+          "role": "place",
+          "checked_at": null
+        }
+      ],
+      "notability": {
+        "basis": "校方官网",
+        "source": "https://www.hust.edu.cn/"
+      },
+      "accuracy": {
+        "method": null,
+        "visual": null,
+        "geometry": null,
+        "limitations": null
+      },
+      "resources": [],
+      "license": "not-applicable",
+      "author": null,
+      "verified_at": null,
+      "added_at": "2026-10-18"
+    },
+    {
+      "id": "campus-bit",
+      "name": "北京理工大学",
+      "name_en": "Beijing Institute of Technology",
+      "category": "campus",
+      "world": "real",
+      "location": "北京",
+      "countries": [
+        "CN"
+      ],
+      "region": "",
+      "tags": [
+        "大学",
+        "校园"
+      ],
+      "status": "planned",
+      "scope": null,
+      "description": "查看地点档案，或补充这里的三维场景。",
+      "sources": [
+        {
+          "label": "地点或作品来源",
+          "url": "https://www.bit.edu.cn/",
+          "role": "place",
+          "checked_at": null
+        }
+      ],
+      "notability": {
+        "basis": "校方官网",
+        "source": "https://www.bit.edu.cn/"
+      },
+      "accuracy": {
+        "method": null,
+        "visual": null,
+        "geometry": null,
+        "limitations": null
+      },
+      "resources": [],
+      "license": "not-applicable",
+      "author": null,
+      "verified_at": null,
+      "added_at": "2026-10-18"
+    },
+    {
+      "id": "campus-buaa",
+      "name": "北京航空航天大学",
+      "name_en": "Beihang University",
+      "category": "campus",
+      "world": "real",
+      "location": "北京",
+      "countries": [
+        "CN"
+      ],
+      "region": "",
+      "tags": [
+        "大学",
+        "校园"
+      ],
+      "status": "planned",
+      "scope": null,
+      "description": "查看地点档案，或补充这里的三维场景。",
+      "sources": [
+        {
+          "label": "地点或作品来源",
+          "url": "https://www.buaa.edu.cn/",
+          "role": "place",
+          "checked_at": null
+        }
+      ],
+      "notability": {
+        "basis": "校方官网",
+        "source": "https://www.buaa.edu.cn/"
+      },
+      "accuracy": {
+        "method": null,
+        "visual": null,
+        "geometry": null,
+        "limitations": null
+      },
+      "resources": [],
+      "license": "not-applicable",
+      "author": null,
+      "verified_at": null,
+      "added_at": "2026-10-18"
+    },
+    {
+      "id": "campus-hit",
+      "name": "哈尔滨工业大学",
+      "name_en": "Harbin Institute of Technology",
+      "category": "campus",
+      "world": "real",
+      "location": "哈尔滨",
+      "countries": [
+        "CN"
+      ],
+      "region": "",
+      "tags": [
+        "大学",
+        "校园"
+      ],
+      "status": "planned",
+      "scope": null,
+      "description": "查看地点档案，或补充这里的三维场景。",
+      "sources": [
+        {
+          "label": "地点或作品来源",
+          "url": "https://www.hit.edu.cn/",
+          "role": "place",
+          "checked_at": null
+        }
+      ],
+      "notability": {
+        "basis": "校方官网",
+        "source": "https://www.hit.edu.cn/"
+      },
+      "accuracy": {
+        "method": null,
+        "visual": null,
+        "geometry": null,
+        "limitations": null
+      },
+      "resources": [],
+      "license": "not-applicable",
+      "author": null,
+      "verified_at": null,
+      "added_at": "2026-10-18"
+    },
+    {
+      "id": "campus-sdu",
+      "name": "山东大学",
+      "name_en": "Shandong University",
+      "category": "campus",
+      "world": "real",
+      "location": "山东",
+      "countries": [
+        "CN"
+      ],
+      "region": "",
+      "tags": [
+        "大学",
+        "校园"
+      ],
+      "status": "planned",
+      "scope": null,
+      "description": "查看地点档案，或补充这里的三维场景。",
+      "sources": [
+        {
+          "label": "地点或作品来源",
+          "url": "https://www.sdu.edu.cn/",
+          "role": "place",
+          "checked_at": null
+        }
+      ],
+      "notability": {
+        "basis": "校方官网",
+        "source": "https://www.sdu.edu.cn/"
+      },
+      "accuracy": {
+        "method": null,
+        "visual": null,
+        "geometry": null,
+        "limitations": null
+      },
+      "resources": [],
+      "license": "not-applicable",
+      "author": null,
+      "verified_at": null,
+      "added_at": "2026-10-18"
+    },
+    {
+      "id": "campus-hku",
+      "name": "香港大学",
+      "name_en": "The University of Hong Kong",
+      "category": "campus",
+      "world": "real",
+      "location": "香港",
+      "countries": [
+        "CN"
+      ],
+      "region": "",
+      "tags": [
+        "大学",
+        "校园"
+      ],
+      "status": "planned",
+      "scope": null,
+      "description": "查看地点档案，或补充这里的三维场景。",
+      "sources": [
+        {
+          "label": "地点或作品来源",
+          "url": "https://www.hku.hk/",
+          "role": "place",
+          "checked_at": null
+        }
+      ],
+      "notability": {
+        "basis": "校方官网",
+        "source": "https://www.hku.hk/"
+      },
+      "accuracy": {
+        "method": null,
+        "visual": null,
+        "geometry": null,
+        "limitations": null
+      },
+      "resources": [],
+      "license": "not-applicable",
+      "author": null,
+      "verified_at": null,
+      "added_at": "2026-10-18"
+    },
+    {
+      "id": "campus-cuhk",
+      "name": "香港中文大学",
+      "name_en": "The Chinese University of Hong Kong",
+      "category": "campus",
+      "world": "real",
+      "location": "香港",
+      "countries": [
+        "CN"
+      ],
+      "region": "",
+      "tags": [
+        "大学",
+        "校园"
+      ],
+      "status": "planned",
+      "scope": null,
+      "description": "查看地点档案，或补充这里的三维场景。",
+      "sources": [
+        {
+          "label": "地点或作品来源",
+          "url": "https://www.cuhk.edu.hk/",
+          "role": "place",
+          "checked_at": null
+        }
+      ],
+      "notability": {
+        "basis": "校方官网",
+        "source": "https://www.cuhk.edu.hk/"
+      },
+      "accuracy": {
+        "method": null,
+        "visual": null,
+        "geometry": null,
+        "limitations": null
+      },
+      "resources": [],
+      "license": "not-applicable",
+      "author": null,
+      "verified_at": null,
+      "added_at": "2026-10-18"
+    },
+    {
+      "id": "campus-hkust",
+      "name": "香港科技大学",
+      "name_en": "The Hong Kong University of Science and Technology",
+      "category": "campus",
+      "world": "real",
+      "location": "香港",
+      "countries": [
+        "CN"
+      ],
+      "region": "",
+      "tags": [
+        "大学",
+        "校园"
+      ],
+      "status": "planned",
+      "scope": null,
+      "description": "查看地点档案，或补充这里的三维场景。",
+      "sources": [
+        {
+          "label": "地点或作品来源",
+          "url": "https://hkust.edu.hk/",
+          "role": "place",
+          "checked_at": null
+        }
+      ],
+      "notability": {
+        "basis": "校方官网",
+        "source": "https://hkust.edu.hk/"
+      },
+      "accuracy": {
+        "method": null,
+        "visual": null,
+        "geometry": null,
+        "limitations": null
+      },
+      "resources": [],
+      "license": "not-applicable",
+      "author": null,
+      "verified_at": null,
+      "added_at": "2026-10-18"
+    },
+    {
+      "id": "campus-ntu-taiwan",
+      "name": "台湾大学",
+      "name_en": "National Taiwan University",
+      "category": "campus",
+      "world": "real",
+      "location": "台北",
+      "countries": [
+        "TW"
+      ],
+      "region": "",
+      "tags": [
+        "大学",
+        "校园"
+      ],
+      "status": "planned",
+      "scope": null,
+      "description": "查看地点档案，或补充这里的三维场景。",
+      "sources": [
+        {
+          "label": "地点或作品来源",
+          "url": "https://www.ntu.edu.tw/",
+          "role": "place",
+          "checked_at": null
+        }
+      ],
+      "notability": {
+        "basis": "校方官网",
+        "source": "https://www.ntu.edu.tw/"
+      },
+      "accuracy": {
+        "method": null,
+        "visual": null,
+        "geometry": null,
+        "limitations": null
+      },
+      "resources": [],
+      "license": "not-applicable",
+      "author": null,
+      "verified_at": null,
+      "added_at": "2026-10-18"
+    },
+    {
+      "id": "campus-cambridge",
+      "name": "剑桥大学",
+      "name_en": "University of Cambridge",
+      "category": "campus",
+      "world": "real",
+      "location": "剑桥 · 英国",
+      "countries": [
+        "GB"
+      ],
+      "region": "",
+      "tags": [
+        "大学",
+        "校园"
+      ],
+      "status": "external",
+      "scope": null,
+      "description": "通过关联项目查看资源与说明。",
+      "sources": [
+        {
+          "label": "地点或作品来源",
+          "url": "https://www.cam.ac.uk/",
+          "role": "place",
+          "checked_at": null
+        },
+        {
+          "label": "CULTURE3D 数据集项目",
+          "url": "https://github.com/X-Intelligence-Labs/CULTURE3D",
+          "role": "asset",
+          "checked_at": "2026-10-18"
+        }
+      ],
+      "notability": {
+        "basis": "校方官网",
+        "source": "https://www.cam.ac.uk/"
+      },
+      "accuracy": {
+        "method": null,
+        "visual": null,
+        "geometry": null,
+        "limitations": null
+      },
+      "resources": [
+        {
+          "kind": "source",
+          "label": "CULTURE3D 数据集项目",
+          "url": "https://github.com/X-Intelligence-Labs/CULTURE3D",
+          "format": "外部项目"
+        }
+      ],
+      "license": "per-source",
+      "author": null,
+      "verified_at": null,
+      "added_at": "2026-10-18"
+    },
+    {
+      "id": "campus-oxford",
+      "name": "牛津大学",
+      "name_en": "University of Oxford",
+      "category": "campus",
+      "world": "real",
+      "location": "牛津 · 英国",
+      "countries": [
+        "GB"
+      ],
+      "region": "",
+      "tags": [
+        "大学",
+        "校园"
+      ],
+      "status": "planned",
+      "scope": null,
+      "description": "查看地点档案，或补充这里的三维场景。",
+      "sources": [
+        {
+          "label": "地点或作品来源",
+          "url": "https://www.ox.ac.uk/",
+          "role": "place",
+          "checked_at": null
+        }
+      ],
+      "notability": {
+        "basis": "校方官网",
+        "source": "https://www.ox.ac.uk/"
+      },
+      "accuracy": {
+        "method": null,
+        "visual": null,
+        "geometry": null,
+        "limitations": null
+      },
+      "resources": [],
+      "license": "not-applicable",
+      "author": null,
+      "verified_at": null,
+      "added_at": "2026-10-18"
+    },
+    {
+      "id": "campus-harvard",
+      "name": "哈佛大学",
+      "name_en": "Harvard University",
+      "category": "campus",
+      "world": "real",
+      "location": "剑桥 · 美国",
+      "countries": [
+        "US"
+      ],
+      "region": "",
+      "tags": [
+        "大学",
+        "校园"
+      ],
+      "status": "planned",
+      "scope": null,
+      "description": "查看地点档案，或补充这里的三维场景。",
+      "sources": [
+        {
+          "label": "地点或作品来源",
+          "url": "https://www.harvard.edu/",
+          "role": "place",
+          "checked_at": null
+        }
+      ],
+      "notability": {
+        "basis": "校方官网",
+        "source": "https://www.harvard.edu/"
+      },
+      "accuracy": {
+        "method": null,
+        "visual": null,
+        "geometry": null,
+        "limitations": null
+      },
+      "resources": [],
+      "license": "not-applicable",
+      "author": null,
+      "verified_at": null,
+      "added_at": "2026-10-18"
+    },
+    {
+      "id": "campus-mit",
+      "name": "麻省理工学院",
+      "name_en": "Massachusetts Institute of Technology",
+      "category": "campus",
+      "world": "real",
+      "location": "剑桥 · 美国",
+      "countries": [
+        "US"
+      ],
+      "region": "",
+      "tags": [
+        "大学",
+        "校园"
+      ],
+      "status": "planned",
+      "scope": null,
+      "description": "查看地点档案，或补充这里的三维场景。",
+      "sources": [
+        {
+          "label": "地点或作品来源",
+          "url": "https://www.mit.edu/",
+          "role": "place",
+          "checked_at": null
+        }
+      ],
+      "notability": {
+        "basis": "校方官网",
+        "source": "https://www.mit.edu/"
+      },
+      "accuracy": {
+        "method": null,
+        "visual": null,
+        "geometry": null,
+        "limitations": null
+      },
+      "resources": [],
+      "license": "not-applicable",
+      "author": null,
+      "verified_at": null,
+      "added_at": "2026-10-18"
+    },
+    {
+      "id": "campus-stanford",
+      "name": "斯坦福大学",
+      "name_en": "Stanford University",
+      "category": "campus",
+      "world": "real",
+      "location": "斯坦福 · 美国",
+      "countries": [
+        "US"
+      ],
+      "region": "",
+      "tags": [
+        "大学",
+        "校园"
+      ],
+      "status": "planned",
+      "scope": null,
+      "description": "查看地点档案，或补充这里的三维场景。",
+      "sources": [
+        {
+          "label": "地点或作品来源",
+          "url": "https://www.stanford.edu/",
+          "role": "place",
+          "checked_at": null
+        }
+      ],
+      "notability": {
+        "basis": "校方官网",
+        "source": "https://www.stanford.edu/"
+      },
+      "accuracy": {
+        "method": null,
+        "visual": null,
+        "geometry": null,
+        "limitations": null
+      },
+      "resources": [],
+      "license": "not-applicable",
+      "author": null,
+      "verified_at": null,
+      "added_at": "2026-10-18"
+    },
+    {
+      "id": "campus-yale",
+      "name": "耶鲁大学",
+      "name_en": "Yale University",
+      "category": "campus",
+      "world": "real",
+      "location": "纽黑文 · 美国",
+      "countries": [
+        "US"
+      ],
+      "region": "",
+      "tags": [
+        "大学",
+        "校园"
+      ],
+      "status": "planned",
+      "scope": null,
+      "description": "查看地点档案，或补充这里的三维场景。",
+      "sources": [
+        {
+          "label": "地点或作品来源",
+          "url": "https://www.yale.edu/",
+          "role": "place",
+          "checked_at": null
+        }
+      ],
+      "notability": {
+        "basis": "校方官网",
+        "source": "https://www.yale.edu/"
+      },
+      "accuracy": {
+        "method": null,
+        "visual": null,
+        "geometry": null,
+        "limitations": null
+      },
+      "resources": [],
+      "license": "not-applicable",
+      "author": null,
+      "verified_at": null,
+      "added_at": "2026-10-18"
+    },
+    {
+      "id": "campus-ut-austin",
+      "name": "得克萨斯大学奥斯汀分校",
+      "name_en": "University of Texas at Austin",
+      "category": "campus",
+      "world": "real",
+      "location": "奥斯汀 · 美国",
+      "countries": [
+        "US"
+      ],
+      "region": "",
+      "tags": [
+        "大学",
+        "校园"
+      ],
+      "status": "external",
+      "scope": null,
+      "description": "通过关联项目查看资源与说明。",
+      "sources": [
+        {
+          "label": "地点或作品来源",
+          "url": "https://www.utexas.edu/",
+          "role": "place",
+          "checked_at": null
+        },
+        {
+          "label": "UT Austin 摄影测量项目",
+          "url": "https://github.com/seanhlewis/utimagery",
+          "role": "asset",
+          "checked_at": "2026-10-18"
+        }
+      ],
+      "notability": {
+        "basis": "校方官网",
+        "source": "https://www.utexas.edu/"
+      },
+      "accuracy": {
+        "method": null,
+        "visual": null,
+        "geometry": null,
+        "limitations": null
+      },
+      "resources": [
+        {
+          "kind": "source",
+          "label": "UT Austin 摄影测量项目",
+          "url": "https://github.com/seanhlewis/utimagery",
+          "format": "外部项目"
+        }
+      ],
+      "license": "per-source",
+      "author": null,
+      "verified_at": null,
+      "added_at": "2026-10-18"
+    },
+    {
+      "id": "campus-nus",
+      "name": "新加坡国立大学",
+      "name_en": "National University of Singapore",
+      "category": "campus",
+      "world": "real",
+      "location": "新加坡",
+      "countries": [
+        "SG"
+      ],
+      "region": "",
+      "tags": [
+        "大学",
+        "校园"
+      ],
+      "status": "planned",
+      "scope": null,
+      "description": "查看地点档案，或补充这里的三维场景。",
+      "sources": [
+        {
+          "label": "地点或作品来源",
+          "url": "https://nus.edu.sg/",
+          "role": "place",
+          "checked_at": null
+        }
+      ],
+      "notability": {
+        "basis": "校方官网",
+        "source": "https://nus.edu.sg/"
+      },
+      "accuracy": {
+        "method": null,
+        "visual": null,
+        "geometry": null,
+        "limitations": null
+      },
+      "resources": [],
+      "license": "not-applicable",
+      "author": null,
+      "verified_at": null,
+      "added_at": "2026-10-18"
+    },
+    {
+      "id": "campus-ntu-singapore",
+      "name": "南洋理工大学",
+      "name_en": "Nanyang Technological University",
+      "category": "campus",
+      "world": "real",
+      "location": "新加坡",
+      "countries": [
+        "SG"
+      ],
+      "region": "",
+      "tags": [
+        "大学",
+        "校园"
+      ],
+      "status": "planned",
+      "scope": null,
+      "description": "查看地点档案，或补充这里的三维场景。",
+      "sources": [
+        {
+          "label": "地点或作品来源",
+          "url": "https://www.ntu.edu.sg/",
+          "role": "place",
+          "checked_at": null
+        }
+      ],
+      "notability": {
+        "basis": "校方官网",
+        "source": "https://www.ntu.edu.sg/"
+      },
+      "accuracy": {
+        "method": null,
+        "visual": null,
+        "geometry": null,
+        "limitations": null
+      },
+      "resources": [],
+      "license": "not-applicable",
+      "author": null,
+      "verified_at": null,
+      "added_at": "2026-10-18"
+    },
+    {
+      "id": "campus-utokyo",
+      "name": "东京大学",
+      "name_en": "The University of Tokyo",
+      "category": "campus",
+      "world": "real",
+      "location": "东京 · 日本",
+      "countries": [
+        "JP"
+      ],
+      "region": "",
+      "tags": [
+        "大学",
+        "校园"
+      ],
+      "status": "planned",
+      "scope": null,
+      "description": "查看地点档案，或补充这里的三维场景。",
+      "sources": [
+        {
+          "label": "地点或作品来源",
+          "url": "https://www.u-tokyo.ac.jp/",
+          "role": "place",
+          "checked_at": null
+        }
+      ],
+      "notability": {
+        "basis": "校方官网",
+        "source": "https://www.u-tokyo.ac.jp/"
+      },
+      "accuracy": {
+        "method": null,
+        "visual": null,
+        "geometry": null,
+        "limitations": null
+      },
+      "resources": [],
+      "license": "not-applicable",
+      "author": null,
+      "verified_at": null,
+      "added_at": "2026-10-18"
+    },
+    {
+      "id": "campus-eth",
+      "name": "苏黎世联邦理工学院",
+      "name_en": "ETH Zurich",
+      "category": "campus",
+      "world": "real",
+      "location": "苏黎世 · 瑞士",
+      "countries": [
+        "CH"
+      ],
+      "region": "",
+      "tags": [
+        "大学",
+        "校园"
+      ],
+      "status": "planned",
+      "scope": null,
+      "description": "查看地点档案，或补充这里的三维场景。",
+      "sources": [
+        {
+          "label": "地点或作品来源",
+          "url": "https://ethz.ch/",
+          "role": "place",
+          "checked_at": null
+        }
+      ],
+      "notability": {
+        "basis": "校方官网",
+        "source": "https://ethz.ch/"
+      },
+      "accuracy": {
+        "method": null,
+        "visual": null,
+        "geometry": null,
+        "limitations": null
+      },
+      "resources": [],
+      "license": "not-applicable",
+      "author": null,
+      "verified_at": null,
+      "added_at": "2026-10-18"
+    },
+    {
+      "id": "campus-usyd",
+      "name": "悉尼大学",
+      "name_en": "The University of Sydney",
+      "category": "campus",
+      "world": "real",
+      "location": "悉尼 · 澳大利亚",
+      "countries": [
+        "AU"
+      ],
+      "region": "",
+      "tags": [
+        "大学",
+        "校园"
+      ],
+      "status": "planned",
+      "scope": null,
+      "description": "查看地点档案，或补充这里的三维场景。",
+      "sources": [
+        {
+          "label": "地点或作品来源",
+          "url": "https://www.sydney.edu.au/",
+          "role": "place",
+          "checked_at": null
+        }
+      ],
+      "notability": {
+        "basis": "校方官网",
+        "source": "https://www.sydney.edu.au/"
+      },
+      "accuracy": {
+        "method": null,
+        "visual": null,
+        "geometry": null,
+        "limitations": null
+      },
+      "resources": [],
+      "license": "not-applicable",
+      "author": null,
+      "verified_at": null,
+      "added_at": "2026-10-18"
+    },
+    {
+      "id": "history-pompeii",
+      "name": "庞贝古城 · 公元 79 年前",
+      "name_en": "Pompeii before 79 CE",
+      "category": "historical",
+      "world": "historical",
+      "location": "意大利",
+      "countries": [
+        "IT"
+      ],
+      "region": "",
+      "tags": [
+        "历史复原",
+        "年代待细化"
+      ],
+      "status": "planned",
+      "scope": null,
+      "description": "查看地点档案，或补充这里的三维场景。",
+      "sources": [
+        {
+          "label": "地点或作品来源",
+          "url": "https://whc.unesco.org/en/list/829/",
+          "role": "place",
+          "checked_at": null
+        }
+      ],
+      "notability": {
+        "basis": "世界遗产资料",
+        "source": "https://whc.unesco.org/en/list/829/"
+      },
+      "accuracy": {
+        "method": null,
+        "visual": null,
+        "geometry": null,
+        "limitations": null
+      },
+      "resources": [],
+      "license": "not-applicable",
+      "author": null,
+      "verified_at": null,
+      "added_at": "2026-10-18"
+    },
+    {
+      "id": "history-daming",
+      "name": "大明宫 · 唐代",
+      "name_en": "Daming Palace in the Tang dynasty",
+      "category": "historical",
+      "world": "historical",
+      "location": "西安",
+      "countries": [
+        "CN"
+      ],
+      "region": "",
+      "tags": [
+        "历史复原",
+        "年代待细化"
+      ],
+      "status": "planned",
+      "scope": null,
+      "description": "查看地点档案，或补充这里的三维场景。",
+      "sources": [
+        {
+          "label": "地点或作品来源",
+          "url": "https://whc.unesco.org/en/list/1442/",
+          "role": "place",
+          "checked_at": null
+        }
+      ],
+      "notability": {
+        "basis": "世界遗产资料",
+        "source": "https://whc.unesco.org/en/list/1442/"
+      },
+      "accuracy": {
+        "method": null,
+        "visual": null,
+        "geometry": null,
+        "limitations": null
+      },
+      "resources": [],
+      "license": "not-applicable",
+      "author": null,
+      "verified_at": null,
+      "added_at": "2026-10-18"
+    },
+    {
+      "id": "history-rome",
+      "name": "古罗马广场 · 帝国时期",
+      "name_en": "Roman Forum in the imperial period",
+      "category": "historical",
+      "world": "historical",
+      "location": "罗马",
+      "countries": [
+        "IT"
+      ],
+      "region": "",
+      "tags": [
+        "历史复原",
+        "年代待细化"
+      ],
+      "status": "planned",
+      "scope": null,
+      "description": "查看地点档案，或补充这里的三维场景。",
+      "sources": [
+        {
+          "label": "地点或作品来源",
+          "url": "https://whc.unesco.org/en/list/91/",
+          "role": "place",
+          "checked_at": null
+        }
+      ],
+      "notability": {
+        "basis": "世界遗产资料",
+        "source": "https://whc.unesco.org/en/list/91/"
+      },
+      "accuracy": {
+        "method": null,
+        "visual": null,
+        "geometry": null,
+        "limitations": null
+      },
+      "resources": [],
+      "license": "not-applicable",
+      "author": null,
+      "verified_at": null,
+      "added_at": "2026-10-18"
+    },
+    {
+      "id": "taohuayuan",
+      "name": "桃花源",
+      "name_en": "Peach Blossom Spring",
+      "category": "fictional",
+      "world": "fictional",
+      "location": "陶渊明《桃花源记》",
+      "countries": [],
+      "region": "",
+      "tags": [
+        "文学空间",
+        "创作计划"
+      ],
+      "status": "planned",
+      "scope": null,
+      "description": "查看地点档案，或补充这里的三维场景。",
+      "sources": [
+        {
+          "label": "地点或作品来源",
+          "url": "https://zh.wikisource.org/wiki/桃花源記",
+          "role": "place",
+          "checked_at": null
+        }
+      ],
+      "notability": {
+        "basis": "作品原文",
+        "source": "https://zh.wikisource.org/wiki/桃花源記"
+      },
+      "accuracy": {
+        "method": null,
+        "visual": null,
+        "geometry": null,
+        "limitations": null
+      },
+      "resources": [],
+      "license": "not-applicable",
+      "author": null,
+      "verified_at": null,
+      "added_at": "2026-10-18"
+    },
+    {
+      "id": "wonderland",
+      "name": "爱丽丝的仙境",
+      "name_en": "Wonderland",
+      "category": "fictional",
+      "world": "fictional",
+      "location": "Lewis Carroll · Alice’s Adventures in Wonderland",
+      "countries": [],
+      "region": "",
+      "tags": [
+        "文学空间",
+        "创作计划"
+      ],
+      "status": "planned",
+      "scope": null,
+      "description": "查看地点档案，或补充这里的三维场景。",
+      "sources": [
+        {
+          "label": "地点或作品来源",
+          "url": "https://www.gutenberg.org/ebooks/11",
+          "role": "place",
+          "checked_at": null
+        }
+      ],
+      "notability": {
+        "basis": "作品原文",
+        "source": "https://www.gutenberg.org/ebooks/11"
+      },
+      "accuracy": {
+        "method": null,
+        "visual": null,
+        "geometry": null,
+        "limitations": null
+      },
+      "resources": [],
+      "license": "not-applicable",
+      "author": null,
+      "verified_at": null,
+      "added_at": "2026-10-18"
+    },
+    {
+      "id": "oz",
+      "name": "奥兹国",
+      "name_en": "Land of Oz",
+      "category": "fictional",
+      "world": "fictional",
+      "location": "L. Frank Baum · The Wonderful Wizard of Oz",
+      "countries": [],
+      "region": "",
+      "tags": [
+        "文学空间",
+        "创作计划"
+      ],
+      "status": "planned",
+      "scope": null,
+      "description": "查看地点档案，或补充这里的三维场景。",
+      "sources": [
+        {
+          "label": "地点或作品来源",
+          "url": "https://www.gutenberg.org/ebooks/55",
+          "role": "place",
+          "checked_at": null
+        }
+      ],
+      "notability": {
+        "basis": "作品原文",
+        "source": "https://www.gutenberg.org/ebooks/55"
+      },
+      "accuracy": {
+        "method": null,
+        "visual": null,
+        "geometry": null,
+        "limitations": null
+      },
+      "resources": [],
+      "license": "not-applicable",
+      "author": null,
+      "verified_at": null,
+      "added_at": "2026-10-18"
+    },
+    {
+      "id": "nautilus",
+      "name": "鹦鹉螺号",
+      "name_en": "Nautilus",
+      "category": "fictional",
+      "world": "fictional",
+      "location": "Jules Verne · Twenty Thousand Leagues Under the Seas",
+      "countries": [],
+      "region": "",
+      "tags": [
+        "文学空间",
+        "创作计划"
+      ],
+      "status": "planned",
+      "scope": null,
+      "description": "查看地点档案，或补充这里的三维场景。",
+      "sources": [
+        {
+          "label": "地点或作品来源",
+          "url": "https://www.gutenberg.org/ebooks/164",
+          "role": "place",
+          "checked_at": null
+        }
+      ],
+      "notability": {
+        "basis": "作品原文",
+        "source": "https://www.gutenberg.org/ebooks/164"
+      },
+      "accuracy": {
+        "method": null,
+        "visual": null,
+        "geometry": null,
+        "limitations": null
+      },
+      "resources": [],
+      "license": "not-applicable",
+      "author": null,
+      "verified_at": null,
+      "added_at": "2026-10-18"
+    }
+  ]
+}

@@ -1,0 +1,213 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://enkoic.github.io/awesome-3d-world/data/schema.json",
+  "title": "Awesome 3D World entry",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "name_en",
+    "category",
+    "world",
+    "countries",
+    "location",
+    "region",
+    "tags",
+    "status",
+    "scope",
+    "sources",
+    "accuracy",
+    "resources",
+    "license",
+    "added_at"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "name_en": {
+      "type": "string"
+    },
+    "category": {
+      "enum": [
+        "campus",
+        "scenic",
+        "urban",
+        "landmark",
+        "historical",
+        "fictional"
+      ]
+    },
+    "world": {
+      "enum": [
+        "real",
+        "historical",
+        "fictional"
+      ]
+    },
+    "countries": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[A-Z]{2}$"
+      }
+    },
+    "location": {
+      "type": "string"
+    },
+    "region": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "status": {
+      "enum": [
+        "ready",
+        "external",
+        "planned",
+        "unavailable"
+      ]
+    },
+    "scope": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "label",
+          "url",
+          "role"
+        ],
+        "properties": {
+          "label": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string",
+            "pattern": "^https://"
+          },
+          "role": {
+            "enum": [
+              "place",
+              "asset"
+            ]
+          },
+          "checked_at": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "accuracy": {
+      "type": "object",
+      "required": [
+        "method",
+        "visual",
+        "geometry",
+        "limitations"
+      ],
+      "properties": {
+        "method": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "visual": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "geometry": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "limitations": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "resources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "kind",
+          "label",
+          "url",
+          "format"
+        ],
+        "properties": {
+          "kind": {
+            "enum": [
+              "preview",
+              "download",
+              "source",
+              "dataset"
+            ]
+          },
+          "url": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "format": {
+            "type": "string"
+          },
+          "bytes": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          }
+        }
+      }
+    },
+    "license": {
+      "type": "string"
+    },
+    "author": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "verified_at": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "added_at": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    }
+  }
+}

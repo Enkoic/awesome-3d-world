@@ -1,0 +1,19 @@
+{
+  "whc-439": {"aliases": ["故宫", "北京故宫", "沈阳故宫", "紫禁城", "Forbidden City", "Palace Museum"]},
+  "whc-813": {"aliases": ["苏州园林", "拙政园", "留园", "网师园", "狮子林", "沧浪亭", "Suzhou gardens"]},
+  "whc-438": {"aliases": ["长城", "八达岭", "慕田峪", "金山岭", "Great Wall"]},
+  "whc-441": {"aliases": ["兵马俑", "秦始皇陵", "Terracotta Army"]},
+  "whc-640": {"aliases": ["张家界", "武陵源", "天子山", "袁家界", "Zhangjiajie"]},
+  "whc-1334": {"aliases": ["西湖", "杭州西湖", "West Lake"]},
+  "whc-1002": {"aliases": ["宏村", "西递", "徽派村落", "Hongcun", "Xidi"]},
+  "whc-86": {"aliases": ["金字塔", "吉萨金字塔", "狮身人面像", "Giza", "Sphinx"]},
+  "whc-252": {"aliases": ["泰姬陵", "Taj Mahal"]},
+  "whc-668": {"aliases": ["吴哥窟", "吴哥", "Angkor Wat"]},
+  "whc-166": {"aliases": ["悉尼歌剧院", "Sydney Opera House"], "category": "landmark"},
+  "whc-373": {"aliases": ["巨石阵", "Stonehenge"]},
+  "whc-274": {"aliases": ["马丘比丘", "Machu Picchu"]},
+  "whc-326": {"aliases": ["佩特拉", "Petra"]},
+  "campus-fudan": {"aliases": ["复旦", "邯郸校区", "江湾校区", "枫林校区", "光华楼"]},
+  "campus-xjtlu": {"aliases": ["西浦", "XJTLU", "西交利物浦"]},
+  "daguanyuan": {"aliases": ["红楼梦", "大观园", "怡红院", "潇湘馆", "稻香村", "Dream of the Red Chamber"]}
+}

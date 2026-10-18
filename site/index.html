@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="从大学校园、自然景区到历史复原与文学空间。探索三维地点，查看来源与精度，下载场景，共同补全世界。">
+  <meta name="theme-color" content="#153d32"><title>Awesome 3D World · 三维世界图鉴</title>
+  <link rel="icon" href="assets/mark.svg"><link rel="stylesheet" href="assets/style.css">
+  <script src="assets/app.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#catalog">跳到场景目录</a>
+<header class="topbar">
+  <a class="brand" href="./"><img src="assets/mark.svg" alt="" width="35" height="35"><span>awesome<span class="brand-light">·</span>3d<span class="brand-light">·</span>world<small>三维世界图鉴</small></span></a>
+  <nav aria-label="主导航"><a href="#catalog" class="active">探索目录</a><button data-open="hubs-dialog">资源导航</button><button data-open="rules-dialog">收录规则</button></nav>
+  <a class="github-link" href="https://github.com/Enkoic/awesome-3d-world" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+  <button class="button primary small" data-open="contribute-dialog"><span aria-hidden="true">＋</span> 补充场景</button>
+</header>
+<div class="shell">
+<aside class="sidebar">
+  <div class="sidebar-top"><span class="eyebrow">THE WORLD, IN 3D</span><h2>从一个地方出发</h2></div>
+  <button class="side-item selected" data-category="all"><span class="nav-symbol">◈</span><span>全部场景</span><b data-count="all">—</b></button>
+  <p class="side-label">按场景探索</p>
+  <div id="category-nav"></div>
+  <div class="side-divider"></div>
+  <button class="side-item" id="saved-filter"><span class="nav-symbol">♡</span><span>本机收藏</span><b id="saved-count">0</b></button>
+  <button class="side-item" data-open="rules-dialog"><span class="nav-symbol">≡</span><span>来源与精度说明</span></button>
+  <a class="side-item" href="https://github.com/Enkoic/awesome-3d-world/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener noreferrer"><span class="nav-symbol">↗</span><span>参与共同建设</span></a>
+  <div class="side-note"><span class="live-dot"></span> 持续收集，共同完善<p>每个世界，都值得被看见。<br>每一份重构，都应有据可循。</p><a href="data/catalog.json" download="awesome-3d-world-catalog.json">下载完整目录 JSON ↓</a></div>
+</aside>
+<main id="main">
+  <section class="hero" aria-label="三维世界图鉴介绍">
+    <div class="hero-copy"><div class="eyebrow"><span class="live-dot"></span> AN OPEN ATLAS OF PLACES & WORLDS</div><h1>世界很大，<br>一起走进去。</h1><p>从校园的一角，到山水与城池。<br>让真实的地方、曾经的历史与纸上的世界，<br>成为可以探索的三维空间。</p><div class="hero-buttons"><a class="button primary" href="#catalog">开始探索 <span>↗</span></a><button class="text-button" data-open="rules-dialog">了解这份图鉴 <span>→</span></button></div><div class="hero-foot">地点可检索 · 场景可体验 · 来源可追溯</div></div>
+    <a class="hero-scene" href="viewer.html?id=daguanyuan" aria-label="浏览大观园三维场景"><img src="assets/daguanyuan.webp" alt="大观园体素场景实际运行截图" fetchpriority="high"><div class="hero-shade"></div><span class="featured-tag">首个收录场景 <span>01</span></span><span class="scene-play" aria-hidden="true">↗</span><div class="hero-caption"><span class="eyebrow">THE GRAND VIEW GARDEN</span><strong>纸上的园子，眼前的世界。</strong><div>大观园 <i>／</i>《红楼梦》文学重构 <span class="mini-pill">进入 3D →</span></div></div><span class="image-note">真实场景截图 · 非实测模型</span></a>
+  </section>
+  <section class="metrics" aria-label="资源库统计"><div><strong id="metric-total">—</strong><span>地点与世界档案</span></div><div><strong id="metric-countries">—</strong><span>国家 / 地区代码</span></div><div><strong id="metric-ready">—</strong><span>已验证可浏览</span></div><div><strong id="metric-external">—</strong><span>外部项目</span></div><p>先建立世界的目录，<br>再逐一补全三维场景。</p></section>
+  <section class="catalog-section" id="catalog">
+    <div class="section-heading"><div><span class="eyebrow">EXPLORE THE ATLAS</span><h2 id="category-title">发现一个新的世界<span class="counter" id="result-count"></span></h2></div><div class="view-switch" role="group" aria-label="目录布局"><button id="grid-view" class="selected" aria-label="卡片视图" aria-pressed="true">▦</button><button id="list-view" aria-label="列表视图" aria-pressed="false">☷</button></div></div>
+    <div class="toolbar"><label class="search-box"><svg viewBox="0 0 24 24" width="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><input id="search" type="search" placeholder="搜索地点、学校、作品或标签…" aria-label="搜索目录"><kbd>/</kbd></label><select id="region-filter" aria-label="地区筛选"><option value="all">所有地区</option><option value="CN">中国</option><option value="international">海外地点</option><option value="fictional">虚构空间</option></select><select id="world-filter" aria-label="世界属性"><option value="all">所有世界属性</option><option value="real">现实地点</option><option value="historical">历史复原</option><option value="fictional">架空世界</option></select><select id="sort" aria-label="排序"><option value="recommended">收录优先</option><option value="name">名称排序</option><option value="newest">最近加入</option></select></div>
+    <div class="status-row" role="group" aria-label="资源状态"><button class="chip selected" data-status="all">全部状态</button><button class="chip" data-status="ready"><span class="live-dot"></span> 已验证可浏览</button><button class="chip" data-status="external">外部项目</button><button class="chip" data-status="planned">待收录场景</button><button class="chip" data-status="download">可下载资源</button><button id="reset" class="reset">重置筛选</button></div>
+    <div class="catalog-note"><span>ⓘ</span><p>地点目录持续完善。进入已收录场景，或为熟悉的地方补充三维资源。</p><button id="export-results">导出当前结果 ↓</button></div>
+    <div id="catalog-grid" class="catalog-grid" aria-live="polite"><div class="loading">正在打开世界图鉴…</div></div>
+    <div class="pagination"><span id="page-info"></span><div><button class="button ghost small" id="prev-page">← 上一页</button><button class="button ghost small" id="next-page">下一页 →</button></div></div>
+  </section>
+  <section class="contribute-banner"><div class="contribute-icon" aria-hidden="true">＋</div><div><span class="eyebrow">BUILD THE WORLD, TOGETHER</span><h2>你熟悉的地方，还没有被收录？</h2><p>一份模型、一个来源、一条更正，都能让这份图鉴更完整。</p></div><button class="button primary" data-open="contribute-dialog">补充一个场景 ↗</button></section>
+  <footer><div><b>awesome-3d-world</b><p>用三维记录地方，让来源陪伴每一次探索。</p></div><div><a href="https://github.com/Enkoic/awesome-3d-world" target="_blank" rel="noopener noreferrer">GitHub</a><button data-open="rules-dialog">收录标准</button><a href="https://github.com/Enkoic/awesome-3d-world/blob/main/docs/LICENSING.md" target="_blank" rel="noopener noreferrer">许可与署名</a><small id="snapshot-date">目录快照</small></div></footer>
+</main>
+</div>
+<dialog id="detail-dialog" aria-labelledby="detail-title"><button class="dialog-close" aria-label="关闭详情">×</button><div id="detail-content"></div></dialog>
+<dialog id="rules-dialog" aria-labelledby="rules-title"><button class="dialog-close" aria-label="关闭规则">×</button><div class="dialog-body"><span class="eyebrow">CURATION PRINCIPLES</span><h2 id="rules-title">六类场景，一份世界图鉴。</h2><p class="lead">六类空间，一套可核验的收录标准。</p><div class="rule-grid"><article><b>01 / 场景有身份</b><p>校园、景区、城市街区、地标、历史复原与架空世界。每条只有一个主分类，其他属性使用标签。</p></article><article><b>02 / 知名度有依据</b><p>记录官方名录、学校官网或作品出处；不编造人气分数，也欢迎有特色的区域地点和原创世界。</p></article><article><b>03 / 来源与精度分开</b><p>记录实测、摄影测量、地图建模和艺术重构等来源。视觉表现与几何精度分别说明，只展示有依据的信息。</p></article><article><b>04 / 状态如实说明</b><p>目录、外部项目、可浏览场景分别计数。HTML、GLB、点云和工程分别标注，资源许可按原来源记录。</p></article></div><div class="notice">首批世界遗产目录来自 UNESCO World Heritage Centre。每条档案链接原始资料，社区通过 GitHub 持续补充三维资源。</div><div class="dialog-actions"><a class="button primary" href="https://github.com/Enkoic/awesome-3d-world/blob/main/docs/SCOPE.md" target="_blank" rel="noopener noreferrer">完整收录约束 ↗</a><a class="button ghost" href="https://github.com/Enkoic/awesome-3d-world/blob/main/docs/QUALITY.md" target="_blank" rel="noopener noreferrer">来源与精度标准 ↗</a></div></div></dialog>
+<dialog id="hubs-dialog" aria-labelledby="hubs-title"><button class="dialog-close" aria-label="关闭资源导航">×</button><div class="dialog-body"><span class="eyebrow">RESOURCE DIRECTORY</span><h2 id="hubs-title">寻找三维世界的起点</h2><p class="lead">开放数据、模型合集与构建工具。使用前请核对上游资源及许可。</p><div id="hubs-list" class="hubs-list"></div></div></dialog>
+<dialog id="contribute-dialog" aria-labelledby="contribute-title"><button class="dialog-close" aria-label="关闭补充表单">×</button><div class="dialog-body"><span class="eyebrow">CONTRIBUTE A PLACE</span><h2 id="contribute-title">一起补全这个世界</h2><p class="lead">有完整场景，也可以只有一个值得收录的地点。</p><form id="contribution-form"><div class="form-grid"><label>场景名称 <span>*</span><input name="name" required maxlength="100" placeholder="例如：复旦大学邯郸校区"></label><label>主分类<select name="category" id="contribution-category"></select></label><label>世界属性<select name="world"><option value="real">现实地点</option><option value="historical">历史复原</option><option value="fictional">架空与文学世界</option></select></label><label>地点 / 作品<input name="location" required maxlength="180" placeholder="城市、校区或作品名"></label></div><label>来源链接 <span>*</span><input name="source" type="url" required placeholder="https://…" maxlength="1000"></label><label>浏览或下载链接<input name="resource" type="url" placeholder="https://…（暂无模型可留空）" maxlength="1000"></label><label>作者与许可（选填）<input name="license" maxlength="300" placeholder="作者、许可证或源项目链接"></label><label>覆盖范围、重建方法与局限 <span>*</span><textarea name="notes" rows="4" required maxlength="3000" placeholder="包括哪些建筑或区域？依据什么重建？哪些尺寸或布局是推定？"></textarea></label><p class="form-note">下一步会打开 GitHub Issue 草稿，由你登录并确认提交。贡献经维护者核验后进入目录；此页面不会自动发布内容。</p><div class="dialog-actions"><button class="button primary" type="submit">生成 GitHub 投稿草稿 ↗</button><button class="button ghost" type="button" id="download-draft">下载投稿 JSON ↓</button></div><p id="form-status" role="status"></p></form></div></dialog>
+<div id="toast" role="status" aria-live="polite"></div>
+<noscript><p class="noscript">开启 JavaScript 可使用搜索和筛选。也可直接阅读 <a href="https://github.com/Enkoic/awesome-3d-world/tree/main/catalog">GitHub 分类目录</a>。</p></noscript>
+</body></html>

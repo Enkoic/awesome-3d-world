@@ -1,0 +1,16 @@
+name: 更正资料或失效资源
+description: 报告分类、来源、许可、下载或页面问题
+title: "[更正] "
+body:
+  - type: input
+    id: entry
+    attributes:
+      label: 条目 ID 或网页链接
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 问题、建议更正与依据
+    validations:
+      required: true
