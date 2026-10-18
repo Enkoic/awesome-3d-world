@@ -181,15 +181,17 @@
       "whc-252",
     ];
     const priority = (e) =>
-      first.includes(e.id)
-        ? first.indexOf(e.id)
-        : e.countries.includes("CN")
-          ? 100
-          : e.category === "fictional"
-            ? 200
-            : e.category === "campus"
-              ? 300
-              : 1000;
+      e.status === "ready"
+        ? -1000 + (first.includes(e.id) ? first.indexOf(e.id) : 100)
+        : first.includes(e.id)
+          ? first.indexOf(e.id)
+          : e.countries.includes("CN")
+            ? 100
+            : e.category === "fictional"
+              ? 200
+              : e.category === "campus"
+                ? 300
+                : 1000;
     results.sort(
       state.sort === "name"
         ? (a, b) => a.name.localeCompare(b.name, "zh-CN")
