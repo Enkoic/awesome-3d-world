@@ -53,10 +53,8 @@ body:
   - type: textarea
     id: rights
     attributes:
-      label: 作者与许可证
-      description: 附许可来源；未知请写未声明，不自行推定可商用或再分发
-    validations:
-      required: true
+      label: 作者与许可证（选填）
+      description: 如有明确许可请附来源链接；没有依据的信息可留空
   - type: textarea
     id: accuracy
     attributes:
