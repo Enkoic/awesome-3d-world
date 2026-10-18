@@ -64,7 +64,9 @@
       "license": "LicenseRef-Not-Specified",
       "author": "Enkoic 提供",
       "verified_at": "2026-10-18",
-      "added_at": "2026-10-18"
+      "added_at": "2026-10-18",
+      "thumbnail": "assets/daguanyuan.webp",
+      "self_contained": true
     },
     {
       "id": "campus-fudan",
@@ -72,28 +74,44 @@
       "name_en": "Fudan University",
       "category": "campus",
       "world": "real",
-      "location": "上海",
+      "location": "上海 · 邯郸、江湾与枫林",
       "countries": [
         "CN"
       ],
       "region": "",
       "tags": [
         "大学",
-        "校园"
+        "校园",
+        "985",
+        "体素",
+        "昼夜",
+        "建筑导览"
       ],
-      "status": "external",
-      "scope": null,
-      "description": "通过关联项目查看资源与说明。",
+      "status": "ready",
+      "scope": "邯郸、江湾、枫林三校区：建筑群、道路、水系与校园景观",
+      "description": "探索复旦邯郸、江湾与枫林三校区，切换精细体块与体素视图，查看地标建筑、参考影像和校园夜景。",
       "sources": [
         {
-          "label": "地点或作品来源",
+          "label": "复旦大学官网",
           "url": "https://www.fudan.edu.cn/",
           "role": "place",
+          "checked_at": "2026-10-18"
+        },
+        {
+          "label": "Enkoic 复旦三校区场景与建模说明",
+          "url": "https://github.com/Enkoic/fudan-voxel-campus",
+          "role": "asset",
+          "checked_at": "2026-10-18"
+        },
+        {
+          "label": "OpenStreetMap 数据与署名",
+          "url": "https://www.openstreetmap.org/copyright",
+          "role": "asset",
           "checked_at": null
         },
         {
-          "label": "FudanCampus 开源项目",
-          "url": "https://github.com/bennix/FudanCampus",
+          "label": "参考影像来源与许可",
+          "url": "https://github.com/Enkoic/fudan-voxel-campus/blob/main/references/README.md",
           "role": "asset",
           "checked_at": "2026-10-18"
         }
@@ -103,23 +121,59 @@
         "source": "https://www.fudan.edu.cn/"
       },
       "accuracy": {
-        "method": null,
-        "visual": null,
-        "geometry": null,
-        "limitations": null
+        "method": "OpenStreetMap 建筑轮廓与道路、校园公开资料、Wikimedia 参考照片和程序化建模",
+        "visual": "精细体块与 4 m 体素双版本；建筑信息、地标导览、参考影像；精细版提供夜景",
+        "geometry": "局部米制坐标，Y 轴向上；三校区合并场景采用展示布局",
+        "limitations": "高度综合 OSM 标签与资料推定，立面及植被采用程序化表达；体素网格大小不代表测量精度。"
       },
       "resources": [
         {
-          "kind": "source",
-          "label": "FudanCampus 开源项目",
-          "url": "https://github.com/bennix/FudanCampus",
-          "format": "外部项目"
+          "kind": "preview",
+          "label": "进入体素校园",
+          "url": "scenes/campus-fudan/voxel.html",
+          "format": "HTML / WebGL",
+          "bytes": 7565,
+          "sha256": "61c6c06f6199632a434713e4b4b05c9f3b2cf02ab53053fa296569e8d83d7b67"
+        },
+        {
+          "kind": "preview",
+          "label": "进入精细校园",
+          "url": "scenes/campus-fudan/index.html",
+          "format": "HTML / WebGL",
+          "bytes": 14852,
+          "sha256": "07845bbd6f53c958c4ed6988eb4dd55239704180b78a18af5ad5e474709c5042"
+        },
+        {
+          "kind": "download",
+          "label": "下载校园网页运行包",
+          "url": "downloads/fudan-campus-web.zip",
+          "format": "ZIP / HTML",
+          "bytes": 2543150,
+          "sha256": "36b1d46398ea9d60e73369aa037fffc4c8dd1d1480d165d7bb087a69c92b33a8"
+        },
+        {
+          "kind": "download",
+          "label": "下载精细版三校区 GLB",
+          "url": "https://enkoic.github.io/fudan-voxel-campus/models/fudan-three-campuses.glb",
+          "format": "GLB",
+          "bytes": 58357416,
+          "sha256": "580ada9a44ee0bb23c0541cf4f273c3a39d0131160c3d77054d959fed7463869"
+        },
+        {
+          "kind": "download",
+          "label": "下载体素版三校区 GLB",
+          "url": "https://enkoic.github.io/fudan-voxel-campus/models/fudan-voxel-three-campuses.glb",
+          "format": "GLB",
+          "bytes": 77699996,
+          "sha256": "834a25f77ab494b25063621d2dfd34b5b5f30652ab531418c79906d812c8d548"
         }
       ],
       "license": "per-source",
-      "author": null,
-      "verified_at": null,
-      "added_at": "2026-10-18"
+      "author": "Enkoic 提供",
+      "verified_at": "2026-10-18",
+      "added_at": "2026-10-18",
+      "thumbnail": "assets/campus-fudan.webp",
+      "self_contained": false
     },
     {
       "id": "campus-xjtlu",
@@ -127,23 +181,55 @@
       "name_en": "Xi'an Jiaotong-Liverpool University",
       "category": "campus",
       "world": "real",
-      "location": "苏州",
+      "location": "苏州工业园区",
       "countries": [
         "CN"
       ],
       "region": "",
       "tags": [
         "大学",
-        "校园"
+        "校园",
+        "建筑导览",
+        "昼夜"
       ],
-      "status": "planned",
-      "scope": null,
-      "description": "查看地点档案，或补充这里的三维场景。",
+      "status": "ready",
+      "scope": "苏州工业园区校园：中校区、南校区与新北校区示意建筑群",
+      "description": "走近中心楼的孔洞与玻璃中庭，俯瞰南校区环形庭院、商学院和运动场，在午后、黄昏与夜景中漫游校园。",
       "sources": [
         {
-          "label": "地点或作品来源",
-          "url": "https://www.xjtlu.edu.cn/zh",
+          "label": "西交利物浦大学：我们的校园",
+          "url": "https://www.xjtlu.edu.cn/zh/campus-life/our-campus",
           "role": "place",
+          "checked_at": null
+        },
+        {
+          "label": "场景提供文件与来源说明",
+          "url": "https://github.com/Enkoic/awesome-3d-world/blob/main/site/scenes/campus-xjtlu/SOURCES.md",
+          "role": "asset",
+          "checked_at": "2026-10-18"
+        },
+        {
+          "label": "2026 校园地图",
+          "url": "https://www.xjtlu.edu.cn/wp-content/uploads/2026/03/XJTLU-SIP-Campus-Map-March2026-v2.pdf",
+          "role": "asset",
+          "checked_at": null
+        },
+        {
+          "label": "Aedas 中心楼项目",
+          "url": "https://www.aedas.com/sc/project/xian-jiaotong-liverpool-university-central-building/",
+          "role": "asset",
+          "checked_at": null
+        },
+        {
+          "label": "BDP 南校区项目",
+          "url": "https://www.bdp.com/ae/projects/xi-an-jiaotong-liverpool-university-south-campus",
+          "role": "asset",
+          "checked_at": null
+        },
+        {
+          "label": "OpenStreetMap 数据与署名",
+          "url": "https://www.openstreetmap.org/copyright",
+          "role": "asset",
           "checked_at": null
         }
       ],
@@ -152,16 +238,35 @@
         "source": "https://www.xjtlu.edu.cn/zh"
       },
       "accuracy": {
-        "method": null,
-        "visual": null,
-        "geometry": null,
-        "limitations": null
+        "method": "OpenStreetMap 建筑轮廓、校方校园地图、Aedas 与 BDP 项目照片参考及程序化建模",
+        "visual": "可交互三维建筑与景观，建筑搜索、四站导览、午后/黄昏/夜晚切换",
+        "geometry": "地图轮廓投影至局部米制坐标，重点建筑依据照片进行风格化建模",
+        "limitations": "新北校区生命科学楼采用示意体量；高度结合 OSM 与公开资料推定，树木和校园家具为程序化布置。"
       },
-      "resources": [],
-      "license": "not-applicable",
-      "author": null,
-      "verified_at": null,
-      "added_at": "2026-10-18"
+      "resources": [
+        {
+          "kind": "preview",
+          "label": "进入西浦校园",
+          "url": "scenes/campus-xjtlu/index.html",
+          "format": "HTML / WebGL",
+          "bytes": 978696,
+          "sha256": "3c0df868679098dc1e8a099b18aef3b8c1834e0fef98821d5e7cdc71812ecf28"
+        },
+        {
+          "kind": "download",
+          "label": "下载完整 HTML 场景",
+          "url": "scenes/campus-xjtlu/index.html",
+          "format": "HTML",
+          "bytes": 978696,
+          "sha256": "3c0df868679098dc1e8a099b18aef3b8c1834e0fef98821d5e7cdc71812ecf28"
+        }
+      ],
+      "license": "per-source",
+      "author": "Enkoic 提供",
+      "verified_at": "2026-10-18",
+      "added_at": "2026-10-18",
+      "thumbnail": "assets/campus-xjtlu.webp",
+      "self_contained": true
     },
     {
       "id": "campus-pku",

@@ -1,0 +1,339 @@
+:root {
+  --paper: #f2eadb;
+  --paper-2: #e6dbc8;
+  --paper-3: #d4c6b1;
+  --ink: #1c1814;
+  --muted: #716657;
+  --red: #8f1d2c;
+  --gold: #b08a4a;
+  --line: rgba(28, 24, 20, 0.16);
+  --mono: "SFMono-Regular", "Menlo", "Consolas", monospace;
+  --serif: "Songti SC", "STSong", "Noto Serif SC", "SimSun", serif;
+  --sans: "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", sans-serif;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html, body { width: 100%; height: 100%; margin: 0; overflow: hidden; }
+body {
+  background: #e8dfcf;
+  color: var(--ink);
+  font-family: var(--sans);
+  -webkit-font-smoothing: antialiased;
+}
+#voxel-scene { position: fixed; inset: 0; width: 100%; height: 100%; display: block; touch-action: none; }
+.voxel-grain {
+  position: fixed; inset: 0; z-index: 1; pointer-events: none; opacity: 0.33;
+  background-image:
+    linear-gradient(rgba(28, 24, 20, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(28, 24, 20, 0.03) 1px, transparent 1px);
+  background-size: 32px 32px;
+  mask-image: radial-gradient(ellipse at 55% 45%, black 10%, transparent 85%);
+  -webkit-mask-image: radial-gradient(ellipse at 55% 45%, black 10%, transparent 85%);
+}
+
+/* ------------------------------------------------------------------ top */
+.voxel-top {
+  position: fixed; z-index: 20; top: 0; left: 0; right: 0;
+  display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 18px;
+  padding: 14px 24px 18px;
+  background: linear-gradient(to bottom, rgba(244, 237, 226, 0.96), rgba(244, 237, 226, 0.82) 72%, rgba(244, 237, 226, 0));
+}
+.voxel-top::after {
+  content: ""; position: absolute; left: 24px; right: 24px; bottom: 0; height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(28, 24, 20, 0.22), transparent);
+}
+.voxel-brand { display: inline-flex; align-items: center; gap: 11px; justify-self: start; text-decoration: none; color: var(--ink); }
+.voxel-seal {
+  width: 40px; height: 40px; display: grid; place-items: center;
+  background: var(--red); color: #f7efe1; font-family: var(--serif); font-size: 13px;
+  line-height: 1.05; letter-spacing: 0.02em; border: 1px solid rgba(28, 24, 20, 0.2);
+  box-shadow: 4px 4px 0 rgba(28, 24, 20, 0.14);
+}
+.voxel-brand-copy { display: flex; flex-direction: column; gap: 3px; }
+.voxel-brand-copy strong { font-family: var(--serif); font-size: 16px; letter-spacing: 0.12em; font-weight: 600; }
+.voxel-brand-copy small { font-family: var(--mono); font-size: 7px; letter-spacing: 0.16em; color: var(--muted); }
+.voxel-tabs {
+  display: flex; gap: 0; padding: 3px; border: 1px solid rgba(28, 24, 20, 0.24);
+  background: rgba(247, 241, 230, 0.76); box-shadow: 3px 3px 0 rgba(28, 24, 20, 0.08);
+}
+.voxel-tabs button {
+  border: 0; background: transparent; color: var(--muted); padding: 8px 15px;
+  font-family: var(--sans); font-size: 11px; letter-spacing: 0.1em; cursor: pointer;
+}
+.voxel-tabs button + button { border-left: 1px solid rgba(28, 24, 20, 0.12); }
+.voxel-tabs button:hover { color: var(--ink); background: rgba(255, 255, 255, 0.35); }
+.voxel-tabs button.is-active { background: var(--red); color: #f8eee0; }
+.voxel-actions { justify-self: end; display: flex; align-items: center; gap: 5px; }
+.voxel-actions button, .fine-link {
+  border: 1px solid rgba(28, 24, 20, 0.22); background: rgba(247, 241, 230, 0.72);
+  color: var(--ink); padding: 7px 9px; font-family: var(--mono); font-size: 8px;
+  letter-spacing: 0.06em; cursor: pointer; text-decoration: none; white-space: nowrap;
+}
+.voxel-actions button:hover, .fine-link:hover { background: var(--ink); color: var(--paper); }
+.voxel-actions button[aria-pressed="true"] { background: var(--red); color: #f8eee0; border-color: var(--red); }
+.fine-link { color: var(--red); border-color: rgba(143, 29, 44, 0.4); }
+
+/* ------------------------------------------------------------------ card */
+.voxel-card {
+  position: fixed; z-index: 12; left: 26px; top: 94px; width: 342px;
+  padding: 19px 20px 13px;
+  background: linear-gradient(135deg, rgba(249, 244, 234, 0.98), rgba(235, 225, 209, 0.96));
+  border-top: 3px solid var(--red);
+  box-shadow: 7px 7px 0 rgba(28, 24, 20, 0.13), 0 18px 50px rgba(28, 24, 20, 0.12);
+}
+.voxel-kicker { display: flex; justify-content: space-between; gap: 10px; font-family: var(--mono); font-size: 7px; letter-spacing: 0.13em; color: var(--muted); }
+.voxel-kicker span:last-child { color: var(--red); }
+.voxel-card h1 { margin: 13px 0 0; font-family: var(--serif); font-size: 34px; font-weight: 600; letter-spacing: 0.08em; line-height: 1.05; }
+.voxel-en { margin: 6px 0 0; font-family: var(--mono); font-size: 8px; letter-spacing: 0.18em; color: var(--muted); }
+.voxel-tagline { margin: 13px 0 0; padding-top: 10px; border-top: 1px solid var(--line); font-size: 11px; color: var(--ink); letter-spacing: 0.04em; line-height: 1.65; }
+.voxel-stats { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 13px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.voxel-stats div { display: flex; flex-direction: column; gap: 2px; padding: 10px 0 9px; }
+.voxel-stats div + div { padding-left: 10px; border-left: 1px solid var(--line); }
+.voxel-stats strong { font-family: var(--mono); font-size: 20px; font-weight: 600; color: var(--red); letter-spacing: -0.03em; }
+.voxel-stats span { font-family: var(--mono); font-size: 7px; color: var(--muted); letter-spacing: 0.04em; }
+.voxel-desc { margin: 11px 0 0; font-size: 10.5px; line-height: 1.75; color: #5e5548; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.voxel-legend { display: flex; flex-wrap: wrap; gap: 5px 10px; margin-top: 11px; padding-top: 9px; border-top: 1px solid var(--line); font-size: 8px; color: var(--muted); }
+.voxel-legend span { display: inline-flex; align-items: center; gap: 4px; }
+.voxel-legend i { width: 7px; height: 7px; display: inline-block; }
+.reference-strip {
+  display: flex; align-items: center; gap: 7px; width: 100%; margin-top: 11px; padding: 8px 0 2px;
+  border: 0; border-top: 1px solid var(--line); background: none; color: var(--ink);
+  text-align: left; cursor: pointer;
+}
+.reference-strip:hover { color: var(--red); }
+.reference-strip span { font-family: var(--mono); font-size: 6px; letter-spacing: 0.12em; color: var(--muted); }
+.reference-strip strong { font-family: var(--serif); font-size: 12px; letter-spacing: 0.06em; }
+.reference-strip em { margin-left: auto; font-family: var(--mono); font-style: normal; font-size: 8px; color: var(--red); }
+.overview-campuses { margin-top: 12px; border-top: 1px solid var(--line); }
+.overview-campuses button {
+  width: 100%; display: grid; grid-template-columns: 25px 1fr auto; gap: 8px; align-items: center;
+  padding: 9px 0; border: 0; border-bottom: 1px solid var(--line); background: none;
+  color: var(--ink); text-align: left; cursor: pointer;
+}
+.overview-campuses button:hover { padding-left: 4px; background: rgba(143, 29, 44, 0.04); }
+.overview-campuses span { font-family: var(--mono); font-size: 8px; color: var(--red); }
+.overview-campuses strong { font-family: var(--serif); font-size: 13px; letter-spacing: 0.06em; }
+.overview-campuses em { font-family: var(--mono); font-style: normal; font-size: 7px; color: var(--muted); }
+
+/* ------------------------------------------------------------------ overlays */
+.voxel-hint {
+  position: fixed; z-index: 10; left: 50%; bottom: 24px; transform: translateX(-50%);
+  padding: 7px 12px; border: 1px solid rgba(28, 24, 20, 0.2);
+  background: rgba(247, 241, 230, 0.82); font-family: var(--mono); font-size: 7px;
+  letter-spacing: 0.07em; color: var(--muted); pointer-events: none;
+}
+.voxel-badge {
+  position: fixed; z-index: 10; left: 27px; bottom: 24px; display: flex; align-items: baseline; gap: 6px;
+  padding: 6px 8px; border: 1px solid rgba(28, 24, 20, 0.3); background: rgba(247, 241, 230, 0.8);
+  font-family: var(--mono); pointer-events: none;
+}
+.voxel-badge strong { font-size: 8px; letter-spacing: 0.08em; }
+.voxel-badge span { font-size: 7px; color: var(--muted); }
+.voxel-compass {
+  position: fixed; z-index: 10; right: 28px; bottom: 24px; width: 44px; height: 44px;
+  color: rgba(28, 24, 20, 0.65); pointer-events: none;
+}
+.voxel-compass svg { width: 100%; height: 100%; fill: none; stroke: currentColor; stroke-width: 0.8; }
+.voxel-compass svg path { fill: currentColor; stroke: none; }
+.voxel-compass svg text { fill: currentColor; stroke: none; font-family: var(--mono); font-size: 5px; }
+
+/* ------------------------------------------------------------------ labels */
+.voxel-labels { position: fixed; inset: 0; z-index: 8; pointer-events: none; overflow: hidden; }
+.voxel-label {
+  position: absolute; top: 0; left: 0; padding: 4px 7px 4px 6px;
+  background: rgba(24, 20, 16, 0.9); color: var(--paper); border-left: 4px solid var(--gold);
+  box-shadow: 3px 3px 0 rgba(28, 24, 20, 0.18);
+  pointer-events: auto; cursor: pointer; opacity: 0; white-space: nowrap;
+  transition: opacity 0.2s ease, background 0.2s ease;
+}
+.voxel-label:hover { background: var(--red); }
+.voxel-label .name { display: block; font-family: var(--serif); font-size: 10.5px; letter-spacing: 0.06em; }
+.voxel-label .sub { display: none; margin-top: 2px; font-family: var(--mono); font-size: 6.5px; color: rgba(248, 241, 230, 0.6); letter-spacing: 0.04em; }
+.voxel-label.near .sub { display: block; }
+.voxel-label.area { background: rgba(247, 241, 230, 0.72); color: var(--ink); border-left-color: var(--red); box-shadow: none; }
+.voxel-label.area .name { font-size: 8px; letter-spacing: 0.14em; }
+.voxel-label.campus {
+  padding: 8px 11px; border-left-width: 5px; box-shadow: 5px 5px 0 rgba(28, 24, 20, 0.14);
+}
+.voxel-label.campus .name { font-family: var(--serif); font-size: 17px; letter-spacing: 0.1em; }
+.voxel-label.campus .sub { display: block; }
+.voxel-label.gate { border-left-color: #6b8b70; }
+.voxel-label.is-hidden { opacity: 0 !important; pointer-events: none; }
+.voxel-label.is-visible { opacity: 1; }
+
+/* ------------------------------------------------------------------ reference modal */
+.voxel-modal {
+  position: fixed; inset: 0; z-index: 100; display: grid; place-items: center; padding: 20px;
+  background: rgba(24, 20, 16, 0.58); opacity: 0; transition: opacity 0.25s ease;
+}
+.voxel-modal.is-open { opacity: 1; }
+.reference-card {
+  position: relative; width: min(1000px, 100%); max-height: calc(100vh - 40px); overflow: auto;
+  padding: 28px 32px 18px; background: var(--paper); border-top: 4px solid var(--red);
+  box-shadow: 10px 10px 0 rgba(28, 24, 20, 0.18), 0 30px 90px rgba(0, 0, 0, 0.25);
+  transform: translateY(12px); transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.voxel-modal.is-open .reference-card { transform: translateY(0); }
+.voxel-close {
+  position: absolute; top: 12px; right: 14px; width: 27px; height: 27px;
+  border: 1px solid var(--line); background: transparent; color: var(--muted);
+  font-size: 20px; line-height: 1; cursor: pointer;
+}
+.voxel-close:hover { background: var(--ink); color: var(--paper); }
+.reference-card h2 { margin: 10px 0 0; font-family: var(--serif); font-size: 31px; font-weight: 600; letter-spacing: 0.08em; }
+.reference-sub { margin: 7px 0 0; font-size: 10px; line-height: 1.7; color: var(--muted); }
+.reference-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 18px; margin-top: 18px; }
+.ref-item { display: block; color: var(--ink); text-decoration: none; }
+.ref-image { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; filter: saturate(0.92) contrast(1.03); border: 1px solid var(--line); background: var(--paper-3); }
+.ref-caption { display: grid; grid-template-columns: 1fr auto; gap: 2px 8px; padding-top: 6px; }
+.ref-caption strong { font-family: var(--serif); font-size: 12px; font-weight: 600; letter-spacing: 0.04em; }
+.ref-caption span { font-family: var(--mono); font-size: 6.5px; color: var(--muted); letter-spacing: 0.04em; text-align: right; }
+.ref-caption small { grid-column: 1 / -1; font-family: var(--mono); font-size: 6.5px; color: var(--muted); }
+.ref-caption a { color: var(--red); text-decoration: none; }
+.reference-foot { display: flex; justify-content: space-between; gap: 12px; margin-top: 18px; padding-top: 9px; border-top: 1px solid var(--line); font-family: var(--mono); font-size: 6.5px; line-height: 1.7; color: var(--muted); }
+
+/* ------------------------------------------------------------------ loading */
+.voxel-loading {
+  position: fixed; inset: 0; z-index: 200; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px;
+  background: #e8dfcf; transition: opacity 0.55s ease, visibility 0.55s ease;
+}
+.voxel-loading.is-done { opacity: 0; visibility: hidden; }
+.loading-cubes { display: grid; grid-template-columns: repeat(3, 14px); gap: 4px; transform: rotate(-8deg); }
+.loading-cubes i { width: 14px; height: 14px; background: var(--red); opacity: 0.2; animation: voxelPulse 1.15s infinite ease-in-out; }
+.loading-cubes i:nth-child(2n) { background: var(--gold); animation-delay: 0.12s; }
+.loading-cubes i:nth-child(3n) { animation-delay: 0.24s; }
+.loading-cubes i:nth-child(5) { opacity: 1; animation-delay: 0.36s; }
+@keyframes voxelPulse { 0%, 100% { opacity: 0.18; transform: translateY(0); } 50% { opacity: 0.95; transform: translateY(-3px); } }
+.loading-copy { display: flex; align-items: baseline; gap: 12px; font-family: var(--mono); font-size: 8px; letter-spacing: 0.13em; color: var(--muted); }
+.loading-copy strong { color: var(--red); font-size: 12px; }
+.loading-bar { width: 170px; height: 2px; background: rgba(28, 24, 20, 0.14); }
+.loading-bar i { display: block; width: 0; height: 100%; background: var(--red); transition: width 0.3s ease; }
+body.no-labels .voxel-label { display: none; }
+
+/* ------------------------------------------------------------------ responsive */
+@media (max-width: 1000px) {
+  .voxel-top { grid-template-columns: auto 1fr auto; gap: 8px; padding: 10px 12px 15px; }
+  .voxel-brand-copy small { display: none; }
+  .voxel-brand-copy strong { font-size: 13px; }
+  .voxel-seal { width: 33px; height: 33px; font-size: 11px; }
+  .voxel-tabs button { padding: 7px 10px; font-size: 10px; }
+  .voxel-actions button, .fine-link { padding: 6px 7px; font-size: 7px; }
+  .voxel-card { width: 315px; left: 16px; top: 85px; }
+}
+@media (max-width: 760px) {
+  .voxel-top { grid-template-columns: 1fr auto; padding: 9px 9px 13px; }
+  .voxel-brand { display: none; }
+  .voxel-tabs { justify-self: stretch; min-width: 0; overflow-x: auto; scrollbar-width: none; }
+  .voxel-tabs::-webkit-scrollbar { display: none; }
+  .voxel-tabs button { padding: 7px 11px; font-size: 10px; }
+  .voxel-actions { gap: 3px; }
+  .voxel-actions button, .fine-link { padding: 6px; font-size: 7px; }
+  .voxel-actions .fine-link { display: none; }
+  .voxel-card {
+    left: 10px; right: 10px; top: auto; bottom: 10px; width: auto; padding: 13px 14px 9px;
+    box-shadow: 5px 5px 0 rgba(28, 24, 20, 0.14);
+  }
+  .voxel-card h1 { font-size: 25px; margin-top: 8px; }
+  .voxel-tagline { display: none; }
+  .voxel-desc { display: none; }
+  .voxel-legend { display: none; }
+  .voxel-stats { margin-top: 9px; }
+  .voxel-stats strong { font-size: 17px; }
+  .reference-strip { margin-top: 8px; padding-top: 6px; }
+  .voxel-hint { display: none; }
+  .voxel-badge { left: 10px; bottom: 210px; }
+  .voxel-compass { right: 12px; bottom: 210px; width: 34px; height: 34px; }
+  .reference-card { padding: 23px 16px 14px; }
+  .reference-card h2 { font-size: 25px; }
+  .reference-grid { grid-template-columns: 1fr; gap: 13px; }
+  .reference-foot { flex-direction: column; gap: 2px; }
+  .voxel-label .name { font-size: 9px; }
+  .voxel-label.campus .name { font-size: 14px; }
+}
+
+/* ------------------------------------------------------------------ building info */
+.voxel-fit {
+  display: flex; align-items: center; gap: 7px; width: 100%; margin-top: 9px;
+  padding: 7px 0 2px; border: 0; border-top: 1px solid var(--line);
+  background: none; color: var(--ink); text-align: left; cursor: pointer;
+}
+.voxel-fit span { font-family: var(--mono); font-size: 6px; letter-spacing: 0.12em; color: var(--muted); }
+.voxel-fit strong { font-family: var(--serif); font-size: 11px; letter-spacing: 0.06em; font-weight: 600; }
+.voxel-fit:hover strong { color: var(--red); }
+.voxel-info {
+  position: fixed; z-index: 17; top: 96px; right: 26px; width: 338px;
+  padding: 19px 20px 14px; background: linear-gradient(135deg, rgba(249,244,234,.99), rgba(235,225,209,.97));
+  border-top: 3px solid var(--red);
+  box-shadow: 7px 7px 0 rgba(28,24,20,.13), 0 18px 50px rgba(28,24,20,.14);
+  animation: infoIn .22s cubic-bezier(.16,1,.3,1);
+}
+@keyframes infoIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+.voxel-info-close {
+  position: absolute; top: 9px; right: 12px; width: 24px; height: 24px;
+  border: 1px solid var(--line); background: transparent; color: var(--muted);
+  font-size: 17px; line-height: 1; cursor: pointer;
+}
+.voxel-info-close:hover { background: var(--ink); color: var(--paper); }
+.voxel-info h2 { margin: 10px 0 0; font-family: var(--serif); font-size: 28px; font-weight: 600; letter-spacing: 0.06em; line-height: 1.1; }
+.voxel-info-en { margin: 5px 0 0; font-family: var(--mono); font-size: 7px; letter-spacing: 0.12em; color: var(--muted); text-transform: uppercase; }
+.voxel-info-photo { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; margin-top: 12px; border: 1px solid var(--line); filter: saturate(.9) contrast(1.02); }
+.voxel-info-desc { margin: 12px 0 0; font-size: 10.5px; line-height: 1.75; color: #5e5548; }
+.voxel-info-metrics { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 13px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.voxel-info-metrics div { display: flex; flex-direction: column; gap: 2px; padding: 9px 0; }
+.voxel-info-metrics div + div { padding-left: 8px; border-left: 1px solid var(--line); }
+.voxel-info-metrics span { font-family: var(--mono); font-size: 6px; color: var(--muted); letter-spacing: .05em; }
+.voxel-info-metrics strong { font-family: var(--mono); font-size: 14px; font-weight: 600; color: var(--red); }
+.voxel-info-actions { display: flex; gap: 6px; margin-top: 11px; }
+.voxel-info-actions button {
+  flex: 1; padding: 8px 6px; border: 1px solid rgba(28,24,20,.22); background: transparent;
+  color: var(--ink); font-family: var(--mono); font-size: 7px; letter-spacing: .04em; cursor: pointer;
+}
+.voxel-info-actions button:first-child { background: var(--red); color: #f8eee0; border-color: var(--red); }
+.voxel-info-actions button:hover { background: var(--ink); color: var(--paper); }
+body.info-open .voxel-card { opacity: 0; visibility: hidden; pointer-events: none; }
+
+/* ------------------------------------------------------------------ guided tour */
+.voxel-tour {
+  position: fixed; z-index: 18; left: 50%; bottom: 22px; transform: translateX(-50%);
+  display: grid; grid-template-columns: 1fr auto; gap: 18px; align-items: end;
+  width: min(660px, calc(100vw - 44px)); padding: 14px 16px 13px;
+  background: rgba(24,20,16,.94); color: var(--paper); border-top: 3px solid var(--gold);
+  box-shadow: 6px 6px 0 rgba(28,24,20,.18);
+}
+.tour-copy span { font-family: var(--mono); font-size: 7px; letter-spacing: .12em; color: var(--gold); }
+.tour-copy strong { display: block; margin-top: 3px; font-family: var(--serif); font-size: 20px; letter-spacing: .08em; font-weight: 600; }
+.tour-copy p { margin: 4px 0 0; font-size: 9.5px; line-height: 1.65; color: rgba(248,241,230,.65); }
+.tour-actions { display: flex; gap: 4px; align-items: center; }
+.tour-actions button {
+  padding: 7px 9px; border: 1px solid rgba(248,241,230,.24); background: transparent;
+  color: var(--paper); font-family: var(--mono); font-size: 7px; cursor: pointer; white-space: nowrap;
+}
+.tour-actions button:hover { background: var(--paper); color: var(--ink); }
+#tour-close { border-color: transparent; color: rgba(248,241,230,.55); font-size: 14px; padding: 4px 5px; }
+body.tour-open .voxel-card { display: none; }
+body.tour-open .voxel-info { right: 26px; }
+
+/* ------------------------------------------------------------------ toast */
+.voxel-toast {
+  position: fixed; z-index: 40; left: 50%; bottom: 90px; transform: translateX(-50%);
+  padding: 8px 12px; background: rgba(24,20,16,.94); color: var(--paper);
+  border-left: 3px solid var(--gold); font-family: var(--mono); font-size: 8px; letter-spacing: .04em;
+  box-shadow: 4px 4px 0 rgba(28,24,20,.16); white-space: nowrap;
+}
+
+@media (max-width: 760px) {
+  .voxel-info {
+    left: 10px; right: 10px; top: auto; bottom: 10px; width: auto; max-height: 70vh; overflow: auto; padding: 15px 15px 10px;
+  }
+  .voxel-info h2 { font-size: 24px; }
+  .voxel-info-photo { max-height: 130px; }
+  .voxel-info-desc { -webkit-line-clamp: 3; display: -webkit-box; -webkit-box-orient: vertical; overflow: hidden; }
+  body.info-open .voxel-card { display: none; }
+  .voxel-tour { bottom: 10px; grid-template-columns: 1fr; gap: 8px; padding: 11px 12px; }
+  .tour-copy strong { font-size: 17px; }
+  .tour-copy p { display: none; }
+  .tour-actions { justify-content: flex-end; }
+  .voxel-toast { bottom: 76px; max-width: calc(100vw - 24px); white-space: normal; text-align: center; }
+  .voxel-fit { display: none; }
+  body.tour-open .voxel-info { display: none; }
+}

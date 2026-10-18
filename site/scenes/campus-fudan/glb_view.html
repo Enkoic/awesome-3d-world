@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>GLB Preview</title>
+<style>html,body{margin:0;height:100%;overflow:hidden;background:#dfe6e4}#c{display:block;width:100%;height:100%}#hud{position:fixed;left:18px;top:16px;color:#1b1712;font:12px/1.6 "Songti SC",serif;letter-spacing:.08em;background:rgba(245,239,227,.86);padding:10px 14px;border-top:2px solid #8f1d2c;box-shadow:0 8px 30px rgba(0,0,0,.12)}</style>
+<link rel="icon" href="data:,">
+<script type="importmap">{"imports":{"three":"./vendor/three.module.js","three/addons/":"./vendor/addons/"}}</script></head>
+<body><canvas id="c"></canvas><div id="hud">Loading…</div>
+<script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+const params=new URLSearchParams(location.search);
+const url=params.get('m')||'https://enkoic.github.io/fudan-voxel-campus/models/fudan-three-campuses.glb';
+const canvas=document.querySelector('#c'); const hud=document.querySelector('#hud');
+const renderer=new THREE.WebGLRenderer({canvas,antialias:true}); renderer.setPixelRatio(Math.min(devicePixelRatio,1.5)); renderer.setSize(innerWidth,innerHeight);
+renderer.outputColorSpace=THREE.SRGBColorSpace; renderer.toneMapping=THREE.ACESFilmicToneMapping; renderer.toneMappingExposure=1.0;
+const scene=new THREE.Scene(); scene.background=new THREE.Color('#dfe6e4'); scene.fog=new THREE.FogExp2('#dfe6e4',0.00005);
+const camera=new THREE.PerspectiveCamera(45,innerWidth/innerHeight,1,30000);
+const controls=new OrbitControls(camera,canvas); window.__CAMERA=camera; window.__CONTROLS=controls; controls.enableDamping=true; controls.dampingFactor=.07; controls.maxPolarAngle=Math.PI*.49;
+scene.add(new THREE.AmbientLight(0xffffff,1.4)); scene.add(new THREE.HemisphereLight(0xdfeef7,0x7d7060,1.2));
+const key=new THREE.DirectionalLight(0xfff0d8,2.4); key.position.set(-3000,4500,2500); scene.add(key);
+const fill=new THREE.DirectionalLight(0xacc8df,0.8); fill.position.set(3000,2000,2500); scene.add(fill);
+const loader=new GLTFLoader();
+loader.load(url,(gltf)=>{
+  const root=gltf.scene; scene.add(root); window.__ROOT=root;
+  const box=new THREE.Box3().setFromObject(root); const size=box.getSize(new THREE.Vector3()); const center=box.getCenter(new THREE.Vector3());
+  const maxDim=Math.max(size.x,size.y,size.z); const dist=maxDim*1.08;
+  camera.position.set(center.x+dist*.38, center.y+dist*.48, center.z+dist*.92); controls.target.copy(center); controls.minDistance=maxDim*.1; controls.maxDistance=maxDim*4; controls.update();
+  let meshes=0, labels=0, tris=0; root.traverse(o=>{ if(o.isMesh){meshes++; if(o.material?.transparent) labels++; const g=o.geometry; if(g?.index) tris+=g.index.count/3; else if(g?.attributes?.position) tris+=g.attributes.position.count/3; }});
+  hud.textContent=`${url.split('/').pop()}  ·  ${meshes} meshes / ${Math.round(tris).toLocaleString()} tris / ${labels} transparent`;
+  window.__ready=true; window.__stats={meshes,tris,labels,size:size.toArray(),center:center.toArray()};
+},undefined,(e)=>{hud.textContent='Load error: '+e.message; console.error(e);});
+addEventListener('resize',()=>{camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();renderer.setSize(innerWidth,innerHeight);});
+(function loop(){requestAnimationFrame(loop);controls.update();renderer.render(scene,camera);})();
+</script></body></html>

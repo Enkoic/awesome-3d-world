@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#e8dfcf" />
+  <meta name="author" content="Fudan Voxel Campus" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="复旦大学 · 一校三区｜3D 体素校园" />
+  <meta property="og:description" content="邯郸、江湾、枫林三校区的可交互 3D 体素模型。4 m 方块重建，含地标导览与建筑信息。" />
+  <meta property="og:image" content="https://enkoic.github.io/fudan-voxel-campus/screenshots/voxel-guanghua.jpg" />
+  <meta property="og:url" content="https://enkoic.github.io/fudan-voxel-campus/voxel.html" />
+  <link rel="canonical" href="https://enkoic.github.io/fudan-voxel-campus/voxel.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <title>复旦大学 · 一校三区｜3D 体素校园</title>
+  <meta name="description" content="以公开影像与 OpenStreetMap 数据为参考，用 3D 体素重建复旦大学邯郸、江湾、枫林三校区。" />
+  <link rel="icon" href="./favicon.ico" sizes="any" />
+  <link rel="stylesheet" href="./voxel.css" />
+  <script type="importmap">
+    {"imports":{"three":"./vendor/three.module.js","three/addons/":"./vendor/addons/"}}
+  </script>
+</head>
+<body>
+  <canvas id="voxel-scene" aria-label="复旦大学三校区体素模型"></canvas>
+  <div class="voxel-grain" aria-hidden="true"></div>
+
+  <header class="voxel-top">
+    <a class="voxel-brand" href="#" id="voxel-home" aria-label="三区总览">
+      <span class="voxel-seal">复<br />旦</span>
+      <span class="voxel-brand-copy">
+        <strong>体素一校三区</strong>
+        <small>FUDAN / VOXEL CAMPUS</small>
+      </span>
+    </a>
+    <nav class="voxel-tabs" aria-label="校区切换">
+      <button data-campus="overview" class="is-active">总览</button>
+      <button data-campus="handan">邯郸</button>
+      <button data-campus="jiangwan">江湾</button>
+      <button data-campus="fenglin">枫林</button>
+    </nav>
+    <div class="voxel-actions">
+      <button id="btn-refs" title="查看建模参考影像">参考图</button>
+      <button id="btn-labels" aria-pressed="true" title="显示/隐藏标注">标注</button>
+      <button id="btn-rotate" aria-pressed="false" title="自动旋转">自转</button>
+      <button id="btn-tour" title="地标导览">导览</button>
+      <button id="btn-share" title="复制当前链接">分享</button>
+      <a href="./index.html" class="fine-link" title="打开精细体块版">精细版 ↗</a>
+    </div>
+  </header>
+
+  <aside class="voxel-card" id="voxel-card">
+    <div class="voxel-kicker"><span id="voxel-code">VOXEL STUDY 01</span><span>4 M / CUBE</span></div>
+    <h1 id="voxel-title">邯郸校区</h1>
+    <p class="voxel-en" id="voxel-en">HANDAN CAMPUS</p>
+    <p class="voxel-tagline" id="voxel-tagline"></p>
+    <div class="voxel-stats">
+      <div><strong id="voxel-count">—</strong><span>体素</span></div>
+      <div><strong id="voxel-buildings">—</strong><span>校园建筑</span></div>
+      <div><strong id="voxel-height">—</strong><span>最高 / m</span></div>
+    </div>
+    <p class="voxel-desc" id="voxel-desc"></p>
+    <div class="voxel-legend" id="voxel-legend">
+      <span><i style="background:#d5c7aa"></i>教学</span>
+      <span><i style="background:#a8644e"></i>生活</span>
+      <span><i style="background:#8f3d35"></i>历史</span>
+      <span><i style="background:#3e6d79"></i>水系</span>
+      <span><i style="background:#708b4c"></i>绿地</span>
+    </div>
+    <div class="overview-campuses" id="overview-campuses" hidden>
+      <button data-campus="handan"><span>01</span><strong>邯郸校区</strong><em>363 栋 · 142 m</em></button>
+      <button data-campus="jiangwan"><span>02</span><strong>江湾校区</strong><em>26 栋 · 74 m</em></button>
+      <button data-campus="fenglin"><span>03</span><strong>枫林校区</strong><em>31 栋 · 85 m</em></button>
+    </div>
+    <button class="voxel-fit" id="voxel-fit"><span>VIEW</span><strong>全校区 ↗</strong></button>
+    <button class="reference-strip" id="btn-refs-2"><span>REFERENCE IMAGES</span><strong>参考影像</strong><em>6 张 ↗</em></button>
+  </aside>
+
+  <aside class="voxel-info" id="voxel-info" hidden aria-live="polite">
+    <button class="voxel-info-close" id="voxel-info-close" aria-label="关闭建筑信息">×</button>
+    <div class="voxel-kicker"><span id="voxel-info-kicker">CAMPUS BUILDING</span><span id="voxel-info-type">—</span></div>
+    <h2 id="voxel-info-title">—</h2>
+    <p class="voxel-info-en" id="voxel-info-en"></p>
+    <img class="voxel-info-photo" id="voxel-info-photo" alt="建筑参考影像" hidden />
+    <p class="voxel-info-desc" id="voxel-info-desc"></p>
+    <div class="voxel-info-metrics">
+      <div><span>高度</span><strong id="voxel-info-height">—</strong></div>
+      <div><span>层数</span><strong id="voxel-info-levels">—</strong></div>
+      <div><span>占地</span><strong id="voxel-info-area">—</strong></div>
+    </div>
+    <div class="voxel-info-actions">
+      <button id="voxel-info-focus">在模型中定位 ↗</button>
+      <button id="voxel-info-copy">复制链接</button>
+    </div>
+  </aside>
+
+  <div class="voxel-tour" id="voxel-tour" hidden>
+    <div class="tour-copy">
+      <span id="tour-step">01 / 04</span>
+      <strong id="tour-title">光华楼</strong>
+      <p id="tour-text"></p>
+    </div>
+    <div class="tour-actions">
+      <button id="tour-prev" aria-label="上一站">←</button>
+      <button id="tour-next">下一站 →</button>
+      <button id="tour-close" aria-label="结束导览">×</button>
+    </div>
+  </div>
+
+  <div class="voxel-toast" id="voxel-toast" hidden></div>
+
+  <div class="voxel-hint" id="voxel-hint">点击建筑查看信息 · 拖拽旋转 · 滚轮缩放</div>
+  <div class="voxel-badge"><strong>1 VOXEL</strong><span>= 4 M</span></div>
+  <div class="voxel-compass" id="voxel-compass" aria-hidden="true">
+    <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="18"/><g id="voxel-needle"><path d="M20 6l4 13-4-2-4 2 4-13Z"/></g><text x="20" y="34" text-anchor="middle">N</text></svg>
+  </div>
+  <div class="voxel-labels" id="voxel-labels" aria-hidden="true"></div>
+
+  <section class="voxel-modal" id="reference-modal" hidden>
+    <div class="reference-card">
+      <button class="voxel-close" id="reference-close" aria-label="关闭参考影像">×</button>
+      <div class="voxel-kicker"><span>REFERENCE IMAGES</span><span>WIKIMEDIA COMMONS</span></div>
+      <h2>参考影像</h2>
+      <p class="reference-sub">照片仅用于形体、屋面和配色参考，不作为贴图；三维体素为公开资料基础上的示意重建。</p>
+      <div class="reference-grid" id="reference-grid"></div>
+      <div class="reference-foot">
+        <span>图片作者与许可见每张图下方；点击可打开 Wikimedia Commons 原页面。</span>
+        <span>PD / CC BY-SA 3.0 / CC BY-SA 4.0</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="voxel-loading" id="voxel-loading">
+    <div class="loading-cubes" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="loading-copy"><span>BUILDING VOXEL WORLD</span><strong id="voxel-progress">0%</strong></div>
+    <div class="loading-bar"><i id="voxel-progress-fill"></i></div>
+  </div>
+
+  <script type="module" src="./src/voxel/main.js"></script>
+</body>
+</html>
