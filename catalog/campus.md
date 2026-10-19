@@ -6,7 +6,7 @@
 | --- | --- | --- | --- |
 | [复旦大学](https://enkoic.github.io/awesome-3d-world/?scene=campus-fudan) | 上海 · 邯郸、江湾与枫林 | 已验证可浏览 | [资料](https://www.fudan.edu.cn/) |
 | [西交利物浦大学](https://enkoic.github.io/awesome-3d-world/?scene=campus-xjtlu) | 苏州工业园区 | 已验证可浏览 | [资料](https://www.xjtlu.edu.cn/zh/campus-life/our-campus) |
-| [北京大学](https://enkoic.github.io/awesome-3d-world/?scene=campus-pku) | 北京 | 待收录场景 | [资料](https://www.pku.edu.cn/) |
+| [北京大学 · 燕园核心区](https://enkoic.github.io/awesome-3d-world/?scene=campus-pku) | 北京 · 燕园 | 已验证可浏览 | [资料](https://www.pku.edu.cn/visit.html) |
 | [清华大学](https://enkoic.github.io/awesome-3d-world/?scene=campus-tsinghua) | 北京 | 待收录场景 | [资料](https://www.tsinghua.edu.cn/) |
 | [上海交通大学](https://enkoic.github.io/awesome-3d-world/?scene=campus-sjtu) | 上海 | 待收录场景 | [资料](https://www.sjtu.edu.cn/) |
 | [同济大学](https://enkoic.github.io/awesome-3d-world/?scene=campus-tongji) | 上海 | 待收录场景 | [资料](https://www.tongji.edu.cn/) |

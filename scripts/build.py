@@ -50,7 +50,8 @@ def main():
             assert set(overrides[e['id']]) <= {'aliases','tags','category'}, 'Overrides may only change editorial search/classification fields'
             e.update(overrides[e['id']])
     validate(entries)
-    catalog={'schema_version':1,'updated_at':source['retrieved_at'], 'categories':CATEGORIES,
+    updated_at=max([source['retrieved_at']]+[e.get('verified_at') or e.get('added_at') or '' for e in entries])
+    catalog={'schema_version':1,'updated_at':updated_at, 'categories':CATEGORIES,
         'stats':{'total':len(entries),'ready':sum(e['status']=='ready' for e in entries),'external':sum(e['status']=='external' for e in entries),
                  'countries':len({c for e in entries for c in e['countries']}),'heritage':source['count'],
                  'by_category':dict(Counter(e['category'] for e in entries))},'entries':entries}

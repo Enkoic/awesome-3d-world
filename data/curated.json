@@ -270,28 +270,63 @@
     },
     {
       "id": "campus-pku",
-      "name": "北京大学",
-      "name_en": "Peking University",
+      "name": "北京大学 · 燕园核心区",
+      "name_en": "Peking University · Yanyuan Core",
       "category": "campus",
       "world": "real",
-      "location": "北京",
+      "location": "北京 · 燕园",
       "countries": [
         "CN"
       ],
       "region": "",
       "tags": [
         "大学",
-        "校园"
+        "校园",
+        "985",
+        "低模",
+        "四季",
+        "昼夜",
+        "建筑导览"
       ],
-      "status": "planned",
-      "scope": null,
-      "description": "查看地点档案，或补充这里的三维场景。",
+      "status": "ready",
+      "scope": "西校门—办公楼—未名湖—湖心岛—博雅塔—图书馆与静园连接片区",
+      "description": "沿西校门主轴走入燕园，探索未名湖、博雅塔与图书馆，切换四季和昼夜，循两条路线查看校园地标。",
       "sources": [
         {
-          "label": "地点或作品来源",
-          "url": "https://www.pku.edu.cn/",
+          "label": "北京大学观光访问与燕园地图",
+          "url": "https://www.pku.edu.cn/visit.html",
           "role": "place",
-          "checked_at": null
+          "checked_at": "2026-10-19"
+        },
+        {
+          "label": "参考：北京大学燕园校区地图（PDF）",
+          "url": "https://isdplus.pku.edu.cn/dfiles/pdf/map.pdf",
+          "role": "asset",
+          "checked_at": "2026-10-19"
+        },
+        {
+          "label": "参考：博雅塔文物信息",
+          "url": "https://fdcb.pku.edu.cn/yyww/wwxx/0322a24e16a748928a26e260ff721b76.htm",
+          "role": "place",
+          "checked_at": "2026-10-19"
+        },
+        {
+          "label": "参考：西校门文物信息",
+          "url": "https://fdcb.pku.edu.cn/yyww/wwxx/045978a02a80498bb9748de2b67c8425.htm",
+          "role": "place",
+          "checked_at": "2026-10-19"
+        },
+        {
+          "label": "参考：图书馆东楼照片",
+          "url": "https://photo.pku.edu.cn/detail/89.html",
+          "role": "asset",
+          "checked_at": "2026-10-19"
+        },
+        {
+          "label": "场景源码与来源说明",
+          "url": "https://github.com/Enkoic/awesome-3d-world/blob/main/site/scenes/pku-yanyuan/SOURCES.md",
+          "role": "asset",
+          "checked_at": "2026-10-19"
         }
       ],
       "notability": {
@@ -299,16 +334,41 @@
         "source": "https://www.pku.edu.cn/"
       },
       "accuracy": {
-        "method": null,
-        "visual": null,
-        "geometry": null,
+        "method": "校方地图、建筑文物资料和官方照片参考下的程序化风格化重构",
+        "visual": "低模建筑、湖岸与植被；地点信息、地图、两条导览、四季和昼夜",
+        "geometry": "按校方地图组织相对布局的风格化低模场景",
         "limitations": null
       },
-      "resources": [],
-      "license": "not-applicable",
+      "resources": [
+        {
+          "kind": "preview",
+          "label": "进入北大燕园",
+          "url": "scenes/pku-yanyuan/index.html",
+          "format": "HTML / WebGL",
+          "bytes": 953896,
+          "sha256": "909baf6514542155e9ef64e62461e8356dda26c2667236e09946a683c42ac399"
+        },
+        {
+          "kind": "download",
+          "label": "下载完整 HTML 场景",
+          "url": "scenes/pku-yanyuan/index.html",
+          "format": "HTML",
+          "bytes": 953896,
+          "sha256": "909baf6514542155e9ef64e62461e8356dda26c2667236e09946a683c42ac399"
+        }
+      ],
+      "license": "LicenseRef-Not-Specified",
       "author": null,
-      "verified_at": null,
-      "added_at": "2026-10-18"
+      "verified_at": "2026-10-19",
+      "added_at": "2026-10-18",
+      "aliases": [
+        "北大",
+        "PKU",
+        "燕园",
+        "Peking University"
+      ],
+      "thumbnail": "assets/campus-pku.jpg",
+      "self_contained": true
     },
     {
       "id": "campus-tsinghua",
