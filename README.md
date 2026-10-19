@@ -21,7 +21,7 @@
 | 手工补充大学 | **40**，不构成学校排名或完整大学清单 |
 | 文学世界 | **5**，其中大观园已接入 |
 | 历史复原计划 | **3** |
-| 已验证可浏览的本地场景 | **4：大观园、复旦大学、西交利物浦大学、北京大学燕园核心区** |
+| 已验证可浏览的本地场景 | **5：大观园、复旦大学、西交利物浦大学、北京大学燕园核心区、MIT Killian Court 核心区** |
 | 关联外部校园项目 | **2：剑桥、UT Austin** |
 
 世界遗产条目可能包含一组跨地点/跨国遗产，不等于一个可开放旅游景区，更不等于一个现成模型。部分遗产中的校园、城市和地标被归入相应类别，因此分类计数与手工补充大学数不同。网页统计从数据计算。没有官方中文名称时保留英文原名。
@@ -41,6 +41,7 @@
 
 ## 已收录校园
 
+- [MIT · Killian Court 核心区](https://enkoic.github.io/awesome-3d-world/viewer.html?id=campus-mit)：独立 HTML，大穹顶、罗杰斯楼与查尔斯河岸，地图、八站导览、四季和昼夜。
 - [北京大学 · 燕园核心区](https://enkoic.github.io/awesome-3d-world/viewer.html?id=campus-pku)：独立 HTML，未名湖、博雅塔、西校门与图书馆，四季、昼夜、地图和双路线导览。
 - [复旦大学三校区](https://enkoic.github.io/awesome-3d-world/viewer.html?id=campus-fudan)：体素与精细双版本，网页运行包及两版 GLB 下载。
 - [西交利物浦大学](https://enkoic.github.io/awesome-3d-world/viewer.html?id=campus-xjtlu)：独立 HTML，校区切换、建筑搜索、昼夜与导览。

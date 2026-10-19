@@ -35,7 +35,7 @@
 | [剑桥大学](https://enkoic.github.io/awesome-3d-world/?scene=campus-cambridge) | 剑桥 · 英国 | 外部项目 | [资料](https://www.cam.ac.uk/) |
 | [牛津大学](https://enkoic.github.io/awesome-3d-world/?scene=campus-oxford) | 牛津 · 英国 | 待收录场景 | [资料](https://www.ox.ac.uk/) |
 | [哈佛大学](https://enkoic.github.io/awesome-3d-world/?scene=campus-harvard) | 剑桥 · 美国 | 待收录场景 | [资料](https://www.harvard.edu/) |
-| [麻省理工学院](https://enkoic.github.io/awesome-3d-world/?scene=campus-mit) | 剑桥 · 美国 | 待收录场景 | [资料](https://www.mit.edu/) |
+| [麻省理工学院 · Killian Court 核心区](https://enkoic.github.io/awesome-3d-world/?scene=campus-mit) | 剑桥 · 马萨诸塞州 · 美国 | 已验证可浏览 | [资料](https://web.mit.edu/facilities/maps/campusmap_index.pdf) |
 | [斯坦福大学](https://enkoic.github.io/awesome-3d-world/?scene=campus-stanford) | 斯坦福 · 美国 | 待收录场景 | [资料](https://www.stanford.edu/) |
 | [耶鲁大学](https://enkoic.github.io/awesome-3d-world/?scene=campus-yale) | 纽黑文 · 美国 | 待收录场景 | [资料](https://www.yale.edu/) |
 | [得克萨斯大学奥斯汀分校](https://enkoic.github.io/awesome-3d-world/?scene=campus-ut-austin) | 奥斯汀 · 美国 | 外部项目 | [资料](https://www.utexas.edu/) |
